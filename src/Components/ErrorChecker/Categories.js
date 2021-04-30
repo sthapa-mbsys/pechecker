@@ -1885,7 +1885,7 @@ export const GetCategories=function(){
                 ]
                 },
                 {
-                    name:"Rice, Beans &  Flours",
+                    name:"Rice, Beans & Flours",
                     child:[
                         {
                             name:"Rice",

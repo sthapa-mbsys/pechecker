@@ -67,11 +67,11 @@ const getDescriptionError=function(thisData,descriptionPosition){
                     prevSpace=false
                 }
             }
-            if(spaceCount<200 || spaceCount>600){
+            if(spaceCount<100 || spaceCount>500){
             if(errorType){
                 errorType+=", "
             }
-            errorType+="Try making description field 200-600 words"
+            errorType+="Try making description field 200-500 words"
             }
         }
         return errorType

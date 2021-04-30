@@ -50,7 +50,7 @@ export const ImageChecker=function(thisData,header){
     let invalidImageErrors=""
     splitedImages.forEach(image=>{
         image=image.replaceAll(" ","");
-        if(image.substr(-4)!==".jpg" && image.substr(-5)!==".jpeg"){
+        if(image.substr(-4).toLowerCase()!==".jpg" && image.substr(-5).toLowerCase()!==".jpeg"){
             if(invalidImageErrors){
                 invalidImageErrors+=", "
             }

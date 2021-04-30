@@ -190,9 +190,7 @@ const checkVariableError=function(allData,thisData,header){
     }
     
     const variableSKU=thisData[skuLocation];
-    console.log("variable sku ",variableSKU);
     for(c=0;c<allData.length;c++){
-        console.log("parnet ",allData[c][parentLocation]);
         if(allData[c][parentLocation]===variableSKU){
         return{error:false}
         }
