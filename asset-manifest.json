@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/pechecker/static/css/main.2b581fbf.chunk.css",
+    "main.js": "/pechecker/static/js/main.6de16515.chunk.js",
+    "main.js.map": "/pechecker/static/js/main.6de16515.chunk.js.map",
+    "runtime-main.js": "/pechecker/static/js/runtime-main.40467b7e.js",
+    "runtime-main.js.map": "/pechecker/static/js/runtime-main.40467b7e.js.map",
+    "static/js/2.c0c2d699.chunk.js": "/pechecker/static/js/2.c0c2d699.chunk.js",
+    "static/js/2.c0c2d699.chunk.js.map": "/pechecker/static/js/2.c0c2d699.chunk.js.map",
+    "static/js/3.4cfee28f.chunk.js": "/pechecker/static/js/3.4cfee28f.chunk.js",
+    "static/js/3.4cfee28f.chunk.js.map": "/pechecker/static/js/3.4cfee28f.chunk.js.map",
+    "index.html": "/pechecker/index.html",
+    "static/css/main.2b581fbf.chunk.css.map": "/pechecker/static/css/main.2b581fbf.chunk.css.map",
+    "static/js/2.c0c2d699.chunk.js.LICENSE.txt": "/pechecker/static/js/2.c0c2d699.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.40467b7e.js",
+    "static/js/2.c0c2d699.chunk.js",
+    "static/css/main.2b581fbf.chunk.css",
+    "static/js/main.6de16515.chunk.js"
+  ]
+}
