@@ -22,7 +22,7 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -b master -d build",
+    "deploy": "gh-pages -b built -d build",
     "start": "react-scripts start --host 127.0.0.1",
     "build": "react-scripts build",
     "test": "react-scripts test",
