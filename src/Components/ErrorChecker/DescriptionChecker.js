@@ -71,7 +71,7 @@ const getDescriptionError=function(thisData,descriptionPosition){
             if(errorType){
                 errorType+=", "
             }
-            errorType+="Try making description field 200-500 words"
+            errorType+="Try making description field 100-500 words"
             }
         }
         return errorType
