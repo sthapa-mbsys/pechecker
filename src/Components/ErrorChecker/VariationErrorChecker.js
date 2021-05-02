@@ -129,20 +129,20 @@ const variationAttributeCheck=function(allData,thisData,header){
     // add error if varying attribute is neither empty nor among varying attribute values of parent
     variableAttributeData.map(vData=>{
         if(thisData[vData.nameLocation]!==parentProduct[vData.nameLocation] || thisData[vData.nameLocation]===""){
-            if(errorType!=="") errorType+=", "
+            if(errorType!=="") errorType+=" --- "
             errorType+="No/Wrong attribute name "+thisData[vData.nameLocation]+" Expected "+parentProduct[vData.nameLocation]
         }
         if(thisData[vData.location]!=="" && vData.values.indexOf(thisData[vData.location])===-1){
-            if(errorType!=="") errorType+=", "
+            if(errorType!=="") errorType+=" --- "
             errorType+="Invalid attribute "+thisData[vData.nameLocation]+":"+thisData[vData.location]
         }
         else {
             if(thisData[vData.visibilityLocation]!=="1"){
-                if(errorType!=="") errorType+=", "
+                if(errorType!=="") errorType+=" --- "
                 errorType+="Invalid attribute visibility "+thisData[vData.nameLocation]
             }
             if(thisData[vData.globalLocation]!=="1"){
-                if(errorType!=="") errorType+=", "
+                if(errorType!=="") errorType+=" --- "
                 errorType+="Invalid attribute global "+thisData[vData.nameLocation]
             }
         }
@@ -154,7 +154,7 @@ const variationAttributeCheck=function(allData,thisData,header){
         //  only if not a varying attribute
         if(variationLocatedAt.indexOf(valueLocation)===-1){
             if(thisData[valueLocation]!=="" || thisData[attributeNameLocations[index]]!==""){
-                if(errorType!=="") errorType+=", "
+                if(errorType!=="") errorType+=" --- "
                 errorType+="Additional attribute "+thisData[attributeNameLocations[index]]+":"+thisData[valueLocation]
             }
         }
