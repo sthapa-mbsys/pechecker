@@ -1,6 +1,7 @@
 import {AttributeFormats} from './AttributeFormats'
 export const AttributeFormatChecker=function(thisData,header){
     var attributeNameLocations=[],attributeValueLocations=[],currentHead,errors=[],errorType="",attValStart,attValueEnd
+    const attributeNamesToAvoid=["type"]
     header.map((head,index)=>{
         if(!head) return null
         currentHead=head.replace(/[0-9]/g,'')
@@ -24,7 +25,19 @@ export const AttributeFormatChecker=function(thisData,header){
     attributeNameLocations.map((nameLocation,index)=>{
         const attValues=thisData[attributeValueLocations[index]].toLowerCase();
 
-        if(attValues.indexOf(" and ")!==-1 || attValues.indexOf("&")!==-1 || attValues.indexOf("/")!==-1 || attValues.indexOf("\\")!==-1){
+        if(thisData[nameLocation]!=="" && thisData[attributeValueLocations[index]]===""){
+            errors.push("No value for attribute "+thisData[nameLocation]);
+        }
+
+        if(thisData[nameLocation]==="" && thisData[attributeValueLocations[index]]!==""){
+            errors.push("No attribute name for "+thisData[attributeValueLocations[index]]);
+        }
+
+        if(attributeNamesToAvoid.indexOf(thisData[nameLocation].toLowerCase())!==-1){
+            errors.push("Invalid attribute name "+thisData[nameLocation]);
+        }
+
+        if(attValues.indexOf(" and ")!==-1 || attValues.indexOf("&")!==-1 || attValues.indexOf("/")!==-1 || attValues.indexOf("\\")!==-1 || attValues.indexOf("+")!==-1){
             errors.push("Possible concatinated value for "+thisData[nameLocation]+", seperate it by comma");
             return null;
         }
@@ -50,6 +63,10 @@ export const AttributeFormatChecker=function(thisData,header){
 
             allAttributeValues[thisAttributeCount]= allAttributeValues[thisAttributeCount].substr(attValStart,attValueEnd-attValStart)
 
+            if(allAttributeValues[thisAttributeCount].length>15){
+                errors.push("Lengthy attribute value "+allAttributeValues[thisAttributeCount]);
+            }
+
         errors.push(validateAttributeFormat(thisData[nameLocation],allAttributeValues[thisAttributeCount]))
         }
         return null
@@ -58,7 +75,7 @@ export const AttributeFormatChecker=function(thisData,header){
     errors.map(err=>{
         if(err!==""){
             if(errorType!==""){
-                errorType+=", "
+                errorType+=" --- "
             }
             errorType+=err
         }

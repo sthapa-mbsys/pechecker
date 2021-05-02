@@ -65,7 +65,7 @@ const isAmongPredefinedCategories=function(entryCategories){
             lengthOfParentGroup=parentGroup.length
 
             if(lengthOfParentGroup===0){
-                if(errorType!=="") errorType+=", "
+                if(errorType!=="") errorType+=" --- "
                 errorType+="Could not check for category "+categoryName
             }
 
@@ -75,7 +75,7 @@ const isAmongPredefinedCategories=function(entryCategories){
                     break
                 }
                 if(lengthOfParentGroup-1===childCount){
-                    if(errorType!=="") errorType+=", "
+                    if(errorType!=="") errorType+=" --- "
                     errorType+="Category not found "+categoryName
                 }
             }

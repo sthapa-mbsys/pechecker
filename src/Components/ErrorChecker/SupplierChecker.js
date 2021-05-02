@@ -21,7 +21,7 @@ export const SupplierDataChecker=function(thisData,header){
 
     if(thisData[supplierNameLocation]==="" && thisData[typeLocation].toLowerCase()!=="variation"){
         if(errorType!==""){
-            errorType+=", "
+            errorType+=" --- "
         }
         errorType+="No Supplier Name"
     }

@@ -24,7 +24,7 @@ export const DescriptionCheck=function(thisData,header){
         const descriptionError=getDescriptionError(thisData,descriptionPosition)
         if(descriptionError){
             if(errorType){
-                errorType+=", "
+                errorType+=" --- "
             }
             errorType+=descriptionError
         }
@@ -32,7 +32,7 @@ export const DescriptionCheck=function(thisData,header){
         const targettedKeywordError=getTargettedKeywordError(thisData,targettedKeywordsPosition,descriptionPosition)
         if(targettedKeywordError){
             if(errorType){
-                errorType+=", "
+                errorType+=" --- "
             }
             errorType+=targettedKeywordError
         }
@@ -69,7 +69,7 @@ const getDescriptionError=function(thisData,descriptionPosition){
             }
             if(spaceCount<100 || spaceCount>500){
             if(errorType){
-                errorType+=", "
+                errorType+=" --- "
             }
             errorType+="Try making description field 100-500 words"
             }
@@ -129,7 +129,7 @@ const getTargettedKeywordError=function(thisData,targettedKeywordsPosition,descr
             errorType+="Low occurence in description for "+lowFrequencyKeywords[c]
         }
         else{
-            errorType+=", "+lowFrequencyKeywords[c]
+            errorType+=" --- "+lowFrequencyKeywords[c]
         }
     }
 

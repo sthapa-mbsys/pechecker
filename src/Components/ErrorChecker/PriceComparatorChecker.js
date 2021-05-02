@@ -18,7 +18,7 @@ export const PriceComparator=function(thisData,header){
     if(thuloLink){
         if(thisData[thuloLink]!=="" && (thisData[thuloLink].toLowerCase().indexOf("thulo.com")===-1 || thisData[thuloLink].toLowerCase().indexOf("?q=")!==-1 || thisData[thuloLink].toLowerCase().indexOf("&q=")!==-1)){
             if(errorType){
-                errorType+=", "
+                errorType+=" --- "
             }
             errorType+="Thulo link seems to be invalid"
         }
@@ -36,7 +36,7 @@ export const PriceComparator=function(thisData,header){
     if(darazLink){
         if(thisData[darazLink]!=="" && (thisData[darazLink].toLowerCase().indexOf("daraz.com")===-1 || thisData[darazLink].toLowerCase().indexOf("?q=")!==-1 || thisData[darazLink].toLowerCase().indexOf("&q=")!==-1)){
             if(errorType){
-                errorType+=", "
+                errorType+=" --- "
             }
             errorType+="Daraz link seems to be invalid"
         }
