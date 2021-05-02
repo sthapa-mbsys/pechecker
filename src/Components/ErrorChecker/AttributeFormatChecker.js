@@ -25,16 +25,17 @@ export const AttributeFormatChecker=function(thisData,header){
     attributeNameLocations.map((nameLocation,index)=>{
         const attValues=thisData[attributeValueLocations[index]].toLowerCase();
 
+        if(attributeNamesToAvoid.indexOf(thisData[nameLocation].toLowerCase())!==-1){
+            errors.push("Invalid attribute name "+thisData[nameLocation]);
+            return null;
+        }
+
         if(thisData[nameLocation]!=="" && thisData[attributeValueLocations[index]]===""){
             errors.push("No value for attribute "+thisData[nameLocation]);
         }
 
         if(thisData[nameLocation]==="" && thisData[attributeValueLocations[index]]!==""){
             errors.push("No attribute name for "+thisData[attributeValueLocations[index]]);
-        }
-
-        if(attributeNamesToAvoid.indexOf(thisData[nameLocation].toLowerCase())!==-1){
-            errors.push("Invalid attribute name "+thisData[nameLocation]);
         }
 
         if(attValues.indexOf(" and ")!==-1 || attValues.indexOf("&")!==-1 || attValues.indexOf("/")!==-1 || attValues.indexOf("\\")!==-1 || attValues.indexOf("+")!==-1){
