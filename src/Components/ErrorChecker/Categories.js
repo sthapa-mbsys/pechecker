@@ -3290,8 +3290,17 @@ export const GetCategories=function(){
             ]
         },        
         {
-            name:"New Year Deals",
-            child:[]
+            name:"Vegetables and Fruits",
+            child:[
+                    {
+                        name:"Vegetables",
+                        child:[]
+                    },
+                    {
+                        name:"Fruits",
+                        child:[] 
+                    }
+            ] 
         }    
     ]
 }
