@@ -3231,7 +3231,11 @@ export const GetCategories=function(){
                 {
                     name:"Spray Bottle",
                     child:[]
-                }
+                },
+                {
+                    name:"Sanitizer Dispense Machine",
+                    child:[]
+                } 
             ]
         },
         {
