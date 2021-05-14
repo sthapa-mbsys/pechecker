@@ -1511,10 +1511,10 @@ export const GetCategories=function(){
                             name:"Cooktops",
                             child:[]
                         },
-                        {
-                            name:"Gas Stove",
-                            child:[]
-                        },
+                        // {
+                        //     name:"Gas Stove",
+                        //     child:[]
+                        // },
                         {
                             name:"Fans",
                             child:[]
@@ -2790,6 +2790,10 @@ export const GetCategories=function(){
                                 },
                                 {
                                     name:"Serving Spoons",
+                                    child:[]
+                                },
+                                {
+                                    name:"Gas Stoves",
                                     child:[]
                                 }
                             ]
