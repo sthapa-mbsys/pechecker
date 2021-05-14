@@ -392,7 +392,7 @@ export const GetCategories=function(){
                             child:[]
                         },
                         {
-                            name:"Tricylces",
+                            name:"Tricycles",
                             child:[]
                         },
                         {
