@@ -1532,8 +1532,11 @@ export const GetCategories=function(){
                             child:[]
                         }
                     ]
+                },
+                {
+                    name:"Immersion Rod",
+                    child:[]
                 }
-        
             ]
         },
         {
@@ -2004,6 +2007,10 @@ export const GetCategories=function(){
                         },
                         {
                             name:"Cloth Hangers",
+                            child:[]
+                        },
+                        {
+                            name:"Brooms, Mops & Dustbin",
                             child:[]
                         }
                     ]
@@ -2794,6 +2801,10 @@ export const GetCategories=function(){
                                 },
                                 {
                                     name:"Gas Stoves",
+                                    child:[]
+                                },
+                                {
+                                    name:"Roti Makers",
                                     child:[]
                                 }
                             ]
