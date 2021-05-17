@@ -1393,8 +1393,11 @@ export const GetCategories=function(){
                         {
                             name:"Gas Heaters",
                             child:[]    
+                        },
+                        {
+                            name:"PTC Wall Heaters",
+                            child:[]
                         }
-        
                     ]
                 },
                 {
