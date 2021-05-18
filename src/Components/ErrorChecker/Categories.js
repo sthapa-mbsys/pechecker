@@ -1966,6 +1966,10 @@ export const GetCategories=function(){
                         {
                             name:"Cheese",
                             child:[]
+                        },
+                        {
+                            name:"Ghee",
+                            child:[]
                         }
                     ]
                 },
