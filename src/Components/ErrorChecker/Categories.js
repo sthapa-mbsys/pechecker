@@ -1866,6 +1866,10 @@ export const GetCategories=function(){
                     {
                         name:"Pasta",
                         child:[]
+                    },
+                    {
+                        name:"Egg",
+                        child:[]
                     }
                 ]
                 },
@@ -1886,6 +1890,10 @@ export const GetCategories=function(){
                     },
                     {
                         name:"Juices",
+                        child:[]
+                    },
+                    {
+                        name:"Bottled Water",
                         child:[]
                     }
                 ]
