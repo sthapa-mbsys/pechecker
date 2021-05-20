@@ -2106,6 +2106,10 @@ export const GetCategories=function(){
                         {
                             name:"Lip Plumper",
                             child:[]
+                        },
+                        {
+                            name:"Lip Balm",
+                            child:[]
                         }
                     ]
                 },
@@ -2381,10 +2385,6 @@ export const GetCategories=function(){
                 {
                     name:"Lip Care",
                     child:[
-                        {
-                            name:"Lip Balms",
-                            child:[]
-                        },
                         {
                             name:"Lip Scrubs",
                             child:[]
