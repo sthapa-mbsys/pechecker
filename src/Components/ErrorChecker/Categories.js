@@ -3273,6 +3273,10 @@ export const GetCategories=function(){
                 {
                     name:"Sanitizer Dispense Machine",
                     child:[]
+                },
+                {
+                    name:"Oxygen Concentrator",
+                    child:[]
                 } 
             ]
         },
