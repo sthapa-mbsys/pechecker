@@ -1920,6 +1920,10 @@ export const GetCategories=function(){
                         {
                             name:"Suji",
                             child:[] 
+                        },
+                        {
+                            name:"Beans",
+                            child:[]
                         }
                     ]
                 },
@@ -3154,6 +3158,10 @@ export const GetCategories=function(){
                         },
                         {
                             name:"Weight Loss",
+                            child:[]
+                        },
+                        {
+                            name:"Nutritional Foods",
                             child:[]
                         }
                     ]
