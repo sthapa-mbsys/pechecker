@@ -2877,6 +2877,14 @@ export const GetCategories=function(){
                                     child:[]
                                 }
                             ]
+                        },
+                        {
+                            name:"Apron",
+                            child:[]
+                        },
+                        {
+                            name:"Oven Cover",
+                            child:[]
                         }
                     ]
                 },
