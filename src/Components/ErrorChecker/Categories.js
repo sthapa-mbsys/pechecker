@@ -3277,6 +3277,10 @@ export const GetCategories=function(){
                 {
                     name:"Oxygen Concentrator",
                     child:[]
+                },
+                {
+                    name:"Medical Devices",
+                    child:[]
                 } 
             ]
         },
