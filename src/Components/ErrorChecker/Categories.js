@@ -3051,6 +3051,23 @@ export const GetCategories=function(){
                             child:[]
                         }
                     ]
+                },
+                {
+                    name:"Festive Items & Decor",
+                    child:[
+                        {
+                            name:"Festive Decor",
+                            child:[]
+                        },
+                        {
+                            name:"Festive Gifts",
+                            child:[]
+                        },
+                        {
+                            name:"Spiritual Items",
+                            child:[]
+                        },
+                    ]
                 }
             ]
         },
