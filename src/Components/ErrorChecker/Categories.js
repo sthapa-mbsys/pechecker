@@ -728,7 +728,7 @@ export const GetCategories=function(){
                         child:[]
                     },
                     {
-                        name:"Crossbody Mobile Bags",
+                        name:"Crossbody Bags",
                         child:[]
                     },
                     {
@@ -1078,7 +1078,7 @@ export const GetCategories=function(){
                         child:[]
                     },
                     {
-                        name:"Crossbody Bags",
+                        name:"Crossbody Mobile Bags",
                         child:[]
                     },
                     {
