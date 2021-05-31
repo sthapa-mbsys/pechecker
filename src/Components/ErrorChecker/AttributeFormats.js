@@ -69,8 +69,8 @@ export const AttributeFormats=function(){
             },
             {
                 name:"Resolution",
-                space:true,
-                units:["pixels"]
+                space:false,
+                units:["p","K"]
             }            
         ]
     }
