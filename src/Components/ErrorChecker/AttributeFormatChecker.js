@@ -32,7 +32,7 @@ export const AttributeFormatChecker=function(thisData,header){
 
     attributeDefaults.forEach(defData=>{
         if(defData.defaultLocation && defData.lastValueLocation){
-            if(thisData[defData.lastValueLocation].indexOf(thisData[defData.defaultLocation])===-1){
+            if(thisData[defData.defaultLocation].trim()!=="" && thisData[defData.lastValueLocation].indexOf(thisData[defData.defaultLocation])===-1){
                 errors.push("Default attribute value "+thisData[defData.defaultLocation]+" is not among attibute values ");
             }
         }
