@@ -1,6 +1,6 @@
 import {AttributeFormats} from './AttributeFormats'
 export const AttributeFormatChecker=function(thisData,header){
-    var attributeNameLocations=[],attributeValueLocations=[],currentHead,errors=[],errorType="",attValStart,attValueEnd
+    var attributeNameLocations=[],attributeValueLocations=[],currentHead,errors=[],errorType="",attValStart,attValueEnd,attributeDefaults=[]
     const attributeNamesToAvoid=["type"]
     header.map((head,index)=>{
         if(!head) return null
@@ -12,6 +12,14 @@ export const AttributeFormatChecker=function(thisData,header){
         {
             attributeValueLocations.push(index)
         }
+        else if(currentHead.trim().toLowerCase()==="attribute  default"){
+            attributeDefaults=attributeDefaults.concat([
+                {
+                    "defaultLocation":index,
+                    "lastValueLocation":attributeValueLocations[attributeValueLocations.length-1]
+                }
+            ]);
+        }
         return null
     })
 
@@ -21,6 +29,14 @@ export const AttributeFormatChecker=function(thisData,header){
             errorType:"Attribute name and value header not equal "
         }
     }
+
+    attributeDefaults.forEach(defData=>{
+        if(defData.defaultLocation && defData.lastValueLocation){
+            if(thisData[defData.lastValueLocation].indexOf(thisData[defData.defaultLocation])===-1){
+                errors.push("Default attribute value "+thisData[defData.defaultLocation]+" is not among attibute values ");
+            }
+        }
+    })
 
     attributeNameLocations.map((nameLocation,index)=>{
         const attValues=thisData[attributeValueLocations[index]].toLowerCase();
