@@ -14,7 +14,7 @@ const ErrorEntries=function(){
     if(!errorEntries){
         return (<></>)
     }
-
+    
     return (<>
     {errorEntries.length===0 ? "No Error" :
     <>

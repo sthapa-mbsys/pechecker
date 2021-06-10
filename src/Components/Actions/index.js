@@ -24,3 +24,15 @@ export const error_remove_action=function(){
         type:"REMOVE_ERROR_ENTRIES"
     }
 }
+
+export const show_loader_action=function(){
+    return {
+        type:"SHOW_LOADER"
+    }
+}
+
+export const hide_loader_action=function(){
+    return {
+        type:"HIDE_LOADER"
+    }
+}

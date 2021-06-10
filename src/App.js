@@ -2,6 +2,7 @@ import './App.css';
 import FileUploader from './Components/FileUploader'
 import ErrorEntries from './Components/ErrorEntries'
 import ErrorInfo from './Components/ErrorInfo'
+import Loader from './Components/Loader'
 function App() {
   return (
     <div className="App">
@@ -9,6 +10,7 @@ function App() {
      <FileUploader/>
      <ErrorInfo/>
      <ErrorEntries/>
+     <Loader/>
      </div>
     </div>
   );

@@ -11,21 +11,23 @@ import {GeneralChecker} from '../ErrorChecker/GeneralChecker'
 import {PriceComparator} from '../ErrorChecker/PriceComparatorChecker'
 import {ImageChecker} from '../ErrorChecker/ImageChecker'
 import {DescriptionCheck} from '../ErrorChecker/DescriptionChecker'
+import {show_loader_action,hide_loader_action} from '../Actions'
 
 const FileReader=function({SubmitHandler}){
 
     const headerData=useSelector(state=>state.peDatas.headers);
-    const entries=useSelector(state=>state.peDatas.entries)
+    const entries=useSelector(state=>state.peDatas.entries);
 
     const dispatch=useDispatch();
-
     const start_check=function(){
+
         let headerResult,skuResult,categoryResult,variationResult,attributeFormatResult,priceResult,supplierResult,imageErrorResult,descriptionErrorResult,generalErrorResult,newErrorEntry,priceComparatorErrorResult,existingErrors=[];
         
         headerResult=HeaderChecker(headerData)
 
         if(headerResult.error){
             alert("header error "+headerResult.errorType)
+            dispatch(hide_loader_action()); 
             return;
         }
 
@@ -63,6 +65,8 @@ const FileReader=function({SubmitHandler}){
 
          }
         }
+        
+        dispatch(hide_loader_action()); 
         dispatch(error_entry_action(existingErrors));
     }
 
@@ -72,7 +76,12 @@ const FileReader=function({SubmitHandler}){
             SubmitHandler()
     }}>Upload File</button>
     :
-    <button type="button" onClick={start_check}>Compute Errors</button>
+    <button type="button" onClick={()=>{
+        dispatch(show_loader_action());
+        setTimeout(()=>{
+            start_check();
+        },1000);
+    }}>Compute Errors</button>
     }
     </>
     )
