@@ -19,7 +19,7 @@ export const AttributeFormats=function(){
             {
                 name:"Quantity",
                 space:true,
-                units:["pc","g","ltr","ml","kg","sheets","pair","set","N","sticks"]
+                units:["pc","g","ltr","ml","kg","sheets","pair","set","N","sticks","caps","tabs"]
             },
             {
                 name:"Size",
