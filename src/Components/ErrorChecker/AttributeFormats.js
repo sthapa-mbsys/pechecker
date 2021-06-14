@@ -4,7 +4,7 @@ export const AttributeFormats=function(){
             {
                 name:"Weight",
                 space:true,
-                units:["kg","g","lb"]
+                units:["kg","g","lb","mg"]
             },
             {
                 name:"Compatible Baby Weight",
