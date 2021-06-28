@@ -3376,6 +3376,10 @@ export const GetCategories=function(){
                         child:[] 
                     }
             ] 
+        },
+        {
+            name:"Combo Deals",
+            child:[]
         }    
     ]
 }
