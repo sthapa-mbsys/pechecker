@@ -2181,6 +2181,10 @@ export const GetCategories=function(){
                         {
                             name:"Brooms, Mops & Dustbin",
                             child:[]
+                        },
+                        {
+                            name:"Bucket & Tubs",
+                            child:[]
                         }
                     ],
                     attributes:[
@@ -3536,7 +3540,8 @@ export const GetCategories=function(){
                         "Brand",
                         "Color",
                         "Quantity"
-                    ]
+                    ],
+            passAttributeToChild:true
         },
         {
             name:"Books & Stationery",
