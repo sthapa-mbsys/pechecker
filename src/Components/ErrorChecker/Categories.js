@@ -599,7 +599,13 @@ export const GetCategories=function(){
                                 name:"Sweaters & Cardigans",
                                 child:[]
                             }
-                        ]
+                        ],
+                        attributes:[
+                            "Brand",
+                            "Color",
+                            "Size"
+                        ],
+                        passAttributeToChild:true
                     },
                     {
                     name: "Sports & Active wear",
@@ -659,23 +665,65 @@ export const GetCategories=function(){
                         name:"SmartWatch",
                         child:[]
                     }
-                ]
+                ],
+                attributes:[
+                    "Brand",
+                    "Color",
+                    "Band Material",
+                    "Battery Capacity",
+                    "Case Material",
+                    "Display Type",
+                    "Ideal For",
+                    "Movement",
+                    "RAM",
+                    "Water Resist",
+                    "Weight"
+                ],
+                passAttributeToChild:true
             },
             {
                 name: "Eyewear",
                 child:[
                     {
                         name:"Sunglasses",
-                        child:[]
+                        child:[],
+                        attributes:[
+                            "Brand",
+                            "Frame Color",
+                            "Frame Material",
+                            "Lens Color",
+                            "Size"
+                        ]
                     },
                     {
                         name:"Prescription Glasses",
-                        child:[]
+                        child:[],
+                        attributes:[
+                            "Brand",
+                            "Frame Color",
+                            "Frame Material",
+                            "Lens Color",
+                            "Size"
+                        ]
                     },
                     {
                         name:"Night Glasses",
-                        child:[]
+                        child:[],
+                        attributes:[
+                            "Brand",
+                            "Frame Color",
+                            "Frame Material",
+                            "Lens Color",
+                            "Size"
+                        ]
                     }
+                ],
+                attributes:[
+                    "Brand",
+                    "Frame Color",
+                    "Frame Material",
+                    "Lens Color",
+                    "Size"
                 ]
             },
             {
@@ -683,7 +731,7 @@ export const GetCategories=function(){
                 child:[
                     {
                         name:"Perfumes",
-                        chils:[]
+                        child:[]
                     },
                     {
                         name:"Body Mist",
@@ -693,7 +741,15 @@ export const GetCategories=function(){
                         name:"Roller Ball",
                         child:[]
                     }
-                ]
+                ],
+                attributes:[
+                    "Brand",
+                    "Fragrance",
+                    "Ideal For",
+                    "Perfume Type",
+                    "Quantity"
+                ],
+                passAttributeToChild:true
             },
             {
                 name:"Accessories",
@@ -772,7 +828,14 @@ export const GetCategories=function(){
                         name:"Slippers",
                         child:[]
                     }
-                ]
+                ],
+                attributes:[
+                    "Brand",
+                    "Color",
+                    "Shoe Type",
+                    "Size"
+                ],
+                passAttributeToChild:true
             }
             ]
         },
@@ -791,7 +854,7 @@ export const GetCategories=function(){
                                 },
                                 {
                                     name:"Dresses & Jumpsuits",
-                                    child:[]   
+                                    child:[]  
                                 },
                                 {
                                     name:"Jeans & Jeggings",
@@ -805,7 +868,16 @@ export const GetCategories=function(){
                                     name:"Trousers, Tights & Capris",
                                     child:[]
                                 }
-                            ]
+                            ],
+                            attributes:[
+                                "Brand",
+                                "Color",
+                                "Collar Type",
+                                "Material",
+                                "Size",
+                                "Sleeve"
+                            ],
+                            passAttributeToChild:true
                         },
                         {
                             name:"Maternity Wear",
@@ -980,7 +1052,7 @@ export const GetCategories=function(){
                             },
                             {
                                 name:"Hoodies & Sweatshirts",
-                                child:[]  
+                                child:[]
                             },
                             {
                                 name:"Sweaters & Cardigans",
@@ -990,7 +1062,15 @@ export const GetCategories=function(){
                                 name:"Blazer & Waistcoats",
                                 child:[]
                             }
-                        ]
+                        ],
+                        attributes:[
+                            "Brand",
+                            "Color",
+                            "Neck",
+                            "Size",
+                            "Sleeve"
+                        ],
+                        passAttributeToChild:true
                         }
                     ]
                 },
@@ -1020,9 +1100,17 @@ export const GetCategories=function(){
                     },
                     {
                         name:"Prescription Glasses",
-                        child:[] 
+                        child:[]
                     }
-                ]
+                ],
+                attributes:[
+                    "Brand",
+                    "Frame Color",
+                    "Frame Material",
+                    "Lens Color",
+                    "Size"
+                ],
+                passAttributeToChild:true
                 },
                 {
                  name:"Fragrances",
@@ -1039,7 +1127,15 @@ export const GetCategories=function(){
                         name:"Roller Ball",
                         child:[]
                      }
-                 ]   
+                 ],
+                 attributes:[
+                    "Brand",
+                    "Fragrance",
+                    "Ideal For",
+                    "Perfume Type",
+                    "Quantity"
+                ],
+                passAttributeToChild:true   
                 },
                 {
                     name:"Accessories",
@@ -1068,7 +1164,13 @@ export const GetCategories=function(){
                             name:"Hair accessories",
                             child:[]
                         }
-                    ]
+                    ],
+                    attributes:[
+                        "Brand",
+                        "Color",
+                        "Quantity"
+                    ],
+                    passAttributeToChild:true
                 },
                 {
                 name:"Bags & Wallets",
@@ -1126,7 +1228,14 @@ export const GetCategories=function(){
                         name:"Slippers",
                         child:[]
                     }
-                ]
+                ],
+                attributes:[
+                    "Brand",
+                    "Color",
+                    "Shoe Type",
+                    "Size"
+                ],
+                passAttributeToChild:true
                 }
             ]
         },
@@ -1817,15 +1926,28 @@ export const GetCategories=function(){
             child:[
                 {
                     name:"Beer",
-                    child:[]
+                    child:[],
+                    attributes:[
+                        "Brand",
+                        "Quantity"
+                    ]
                 },
                 {
                     name:"Wine",
-                    child:[]
+                    child:[],
+                    attributes:[
+                        "Brand",
+                        "Quantity"
+                    ]
                 },
                 {
                     name:"Hard Liquors",
-                    child:[]
+                    child:[],
+                    attributes:[
+                        "Brand",
+                        "Quantity",
+                        "Liquor Type"
+                    ]
                 },
                 {
                     name:"Nepali Chhyang",
@@ -1871,6 +1993,10 @@ export const GetCategories=function(){
                         name:"Egg",
                         child:[]
                     }
+                ],
+                attributes:[
+                    "Brand",
+                    "Quantity"
                 ]
                 },
                 {
@@ -1896,6 +2022,13 @@ export const GetCategories=function(){
                         name:"Bottled Water",
                         child:[]
                     }
+                ],
+                attributes:[
+                    "Brand",
+                    "Quantity",
+                    "Volume",
+                    "Form", 
+                    "Ideal For"
                 ]
                 },
                 {
@@ -1925,6 +2058,10 @@ export const GetCategories=function(){
                             name:"Beans",
                             child:[]
                         }
+                    ],
+                    attributes:[
+                        "Brand",
+                        "Quantity"
                     ]
                 },
                 {
@@ -1958,6 +2095,11 @@ export const GetCategories=function(){
                             name:"Soup",
                             child:[]
                         }
+                    ],
+                    attributes:[
+                        "Brand",
+                        "Ingredients",
+                        "Quantity"
                     ] 
                 },
                 {
@@ -1966,7 +2108,12 @@ export const GetCategories=function(){
                 },
                 {
                     name:"Cooking Essentials",
-                    child:[]
+                    child:[],
+                    attributes:[
+                        "Brand", 
+                        "Quantity",
+                        "Volume"
+                    ]
                 },
                 {
                     name:"Dairy Products",
@@ -1987,7 +2134,10 @@ export const GetCategories=function(){
                 },
                 {
                     name:"Frozen Foods",
-                    child:[]
+                    child:[],
+                    attributes:[
+                        "Quantity"
+                    ]
                 },
                 {
                     name:"Cleaning & Laundry Supplies",
@@ -2032,6 +2182,12 @@ export const GetCategories=function(){
                             name:"Brooms, Mops & Dustbin",
                             child:[]
                         }
+                    ],
+                    attributes:[
+                        "Brand",
+                        "Fragnance",
+                        "Quantity",
+                        "Volume"
                     ]
                 }
             ]
@@ -2392,7 +2548,15 @@ export const GetCategories=function(){
                             name:"Eye Creams & Serums",
                             child:[]   
                         }
-                    ]
+                    ],
+                    attributes:[
+                        "Brand",
+                        "Form",
+                        "Applied For",
+                        "Ingredients",
+                        "Quantity"
+                    ],
+                    passAttributeToChild:true
                 },
                 {
                     name:"Lip Care",
@@ -2470,7 +2634,19 @@ export const GetCategories=function(){
                             name:"Wound Care",
                             child:[]
                         }
-                    ]
+                    ],
+                    attributes:[
+                        "Brand",
+                        "Color",
+                        "Applied For",
+                        "Form", 
+                        "Hair Type",
+                        "Quantity",
+                        "Volume",
+                        "Skin Type",
+                        "Ingredients"
+                    ],
+                    passAttributeToChild:true
                 },
                 {
                     name:"Men's Grooming",
@@ -2536,7 +2712,20 @@ export const GetCategories=function(){
                             name:"Scar Removals",
                             child:[]
                         }
-                    ]
+                    ],
+                    attributes:[
+                        "Brand",
+                        "Color",
+                        "Fragrance",
+                        "Material",
+                        "Skin Type",
+                        "Quantity",
+                        "Size",
+                        "Volume",
+                        "Ingredients",
+                        "Ideal For"
+                    ],
+                    passAttributeToChild:true
                 },
                 {
                     name:"Sexual Wellness",
@@ -2587,7 +2776,13 @@ export const GetCategories=function(){
                             child:[]
                         }
         
-                    ]
+                    ],
+                    attributes:[
+                        "Brand",
+                        "Form",
+                        "Quantity"
+                    ],
+                    passAttributeToChild:true
                 },
                 {
                     name:"Health Care Devices",
@@ -3193,11 +3388,26 @@ export const GetCategories=function(){
                 },
                 {
                     name:"Fitness Equipments",
-                    child:[]
+                    child:[],
+                    attributes:[
+                        "Brand", 
+                        "Color",
+                        "Age Group",
+                        "Ideal For",
+                        "Material",
+                        "Weight",
+                    ]
                 },
                 {
                     name:"Outdoor Sports",
-                    child:[]
+                    child:[],
+                    attributes:[
+                        "Brand",
+                        "Color",
+                        "Material",
+                        "Weight",
+                        "Age Group"
+                    ]
                 }
             ]
         },
@@ -3256,15 +3466,29 @@ export const GetCategories=function(){
             child:[
                 {
                     name:"Food",
-                    child:[]
+                    child:[],
+                    attributes:[
+                        "Brand",
+                        "Quantity"
+                    ]
                 },
                 {
                     name:"Accessories",
-                    child:[]
+                    child:[],
+                    attributes:[
+                        "Color",
+                        "Size"
+                    ]
                 },
                 {
                     name:"Personal Care",
-                    child:[]
+                    child:[],
+                    attributes:[
+                        "Brand",
+                        "Color",
+                        "Capacity",
+                        "Weight"
+                    ]
                 }
             ]
         },
@@ -3307,7 +3531,12 @@ export const GetCategories=function(){
                     name:"Medical Devices",
                     child:[]
                 } 
-            ]
+            ],
+            attributes:[
+                        "Brand",
+                        "Color",
+                        "Quantity"
+                    ]
         },
         {
             name:"Books & Stationery",
@@ -3380,7 +3609,7 @@ export const GetCategories=function(){
         {
             name:"Combo Deals",
             child:[]
-        }    
+        },
     ]
 }
 }

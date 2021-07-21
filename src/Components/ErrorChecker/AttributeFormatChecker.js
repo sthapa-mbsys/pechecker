@@ -1,6 +1,7 @@
 import {AttributeFormats} from './AttributeFormats'
-export const AttributeFormatChecker=function(thisData,header){
-    var attributeNameLocations=[],attributeValueLocations=[],currentHead,errors=[],errorType="",attValStart,attValueEnd,attributeDefaults=[]
+import {attributeInCategoryCheck} from './AttributeInCategoryChecker'
+export const AttributeFormatChecker=function(thisData,header,hasCategoryError=false,standardCategoryAttributes=[]){
+    var attributeNameLocations=[],attributeValueLocations=[],currentHead,errors=[],errorType="",attributeDefaults=[]
     const attributeNamesToAvoid=["type"]
     header.map((head,index)=>{
         if(!head) return null
@@ -28,6 +29,18 @@ export const AttributeFormatChecker=function(thisData,header){
             error:true,
             errorType:"Attribute name and value header not equal "
         }
+    }
+
+    // check for attribute in actegory if no category error
+    if(!hasCategoryError){
+    const attributeAllowedInCategoryCheck=attributeInCategoryCheck(attributeNameLocations.map(nameIndex=>thisData[nameIndex]),thisData[header.findIndex(k=>k.toLowerCase().trim()==="categories")],standardCategoryAttributes)
+
+    if(attributeAllowedInCategoryCheck){
+        return {
+            error:true,
+            errorType:attributeAllowedInCategoryCheck
+        }
+    }
     }
 
     attributeDefaults.forEach(defData=>{
@@ -61,24 +74,24 @@ export const AttributeFormatChecker=function(thisData,header){
 
         let allAttributeValues=thisData[attributeValueLocations[index]].split(",")
         for(var thisAttributeCount=0;thisAttributeCount<allAttributeValues.length;thisAttributeCount++){
-            attValStart=0
-            attValueEnd=allAttributeValues[thisAttributeCount].length
+            // attValStart=0
+            // attValueEnd=allAttributeValues[thisAttributeCount].length
 
-            for(var thisAttributeLength=0;thisAttributeLength<allAttributeValues[thisAttributeCount].length;thisAttributeLength++){
-                if(allAttributeValues[thisAttributeCount][thisAttributeLength]!==" "){
-                    attValStart=thisAttributeLength
-                    break;
-                }
-            }
+            // for(var thisAttributeLength=0;thisAttributeLength<allAttributeValues[thisAttributeCount].length;thisAttributeLength++){
+            //     if(allAttributeValues[thisAttributeCount][thisAttributeLength]!==" "){
+            //         attValStart=thisAttributeLength
+            //         break;
+            //     }
+            // }
 
-            for( thisAttributeLength=allAttributeValues[thisAttributeCount].length-1;thisAttributeLength>=0;thisAttributeLength--){
-                if(allAttributeValues[thisAttributeCount][thisAttributeLength]!==" "){
-                    attValueEnd=thisAttributeLength+1
-                    break;
-                }
-            }
+            // for( thisAttributeLength=allAttributeValues[thisAttributeCount].length-1;thisAttributeLength>=0;thisAttributeLength--){
+            //     if(allAttributeValues[thisAttributeCount][thisAttributeLength]!==" "){
+            //         attValueEnd=thisAttributeLength+1
+            //         break;
+            //     }
+            // }
 
-            allAttributeValues[thisAttributeCount]= allAttributeValues[thisAttributeCount].substr(attValStart,attValueEnd-attValStart)
+            allAttributeValues[thisAttributeCount]= allAttributeValues[thisAttributeCount].trim()
 
             if(allAttributeValues[thisAttributeCount].length>15){
                 errors.push("Lengthy attribute value "+allAttributeValues[thisAttributeCount]);

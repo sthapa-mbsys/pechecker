@@ -36,7 +36,7 @@ const FileReader=function({SubmitHandler}){
          categoryResult=categoryChecker(entries[entryCount],headerData)
          priceResult=PriceChecker(entries[entryCount],headerData)
          variationResult=variationChecker(entries,entries[entryCount],headerData)
-         attributeFormatResult=AttributeFormatChecker(entries[entryCount],headerData)
+         attributeFormatResult=AttributeFormatChecker(entries[entryCount],headerData,categoryResult.error,typeof categoryResult.standardCategoryAttributes !== "undefined" ? categoryResult.standardCategoryAttributes : [])
          supplierResult=SupplierDataChecker(entries[entryCount],headerData)
          generalErrorResult=GeneralChecker(entries[entryCount],headerData)
          priceComparatorErrorResult=PriceComparator(entries[entryCount],headerData)

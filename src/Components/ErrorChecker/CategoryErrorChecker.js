@@ -24,12 +24,13 @@ export const categoryChecker=function(data,headerData){
         }
 
         return {
-            error:false
+            error:false,
+            standardCategoryAttributes:maintainStandardCategoryAttributes
         }
     }
 
 const isAmongPredefinedCategories=function(entryCategories){
-    let allCategories=[],structuredCategory,nonEmptyStartAt,nonEmptyEndAt,categoryName,parentGroup,errorType="",lengthOfParentGroup
+    let allCategories=[],structuredCategory,categoryName,parentGroup,errorType="",lengthOfParentGroup
     const categoriesData=GetCategories()
     const categories=categoriesData.categories
 
@@ -41,21 +42,21 @@ const isAmongPredefinedCategories=function(entryCategories){
         parentGroup=null
         structuredCategory.map(cat=>{
             if(errorType!=="") return null
-            for(var charCount=0;charCount<cat.length;charCount++){
-                if(cat[charCount]!==" "){
-                    nonEmptyStartAt=charCount
-                    break;
-                }
-            }
+            // for(var charCount=0;charCount<cat.length;charCount++){
+            //     if(cat[charCount]!==" "){
+            //         nonEmptyStartAt=charCount
+            //         break;
+            //     }
+            // }
 
-            for(charCount=cat.length-1;charCount>=0;charCount--){
-                if(cat[charCount]!==" "){
-                    nonEmptyEndAt=charCount+1
-                    break;
-                }
-            }
+            // for(charCount=cat.length-1;charCount>=0;charCount--){
+            //     if(cat[charCount]!==" "){
+            //         nonEmptyEndAt=charCount+1
+            //         break;
+            //     }
+            // }
 
-            categoryName=cat.substring(nonEmptyStartAt,nonEmptyEndAt)
+            categoryName=cat.trim().replaceAll('/n','').replaceAll('/t','');
             categoryName=categoryName.replace("&#44;",",")
 
             if(!parentGroup){
@@ -70,7 +71,25 @@ const isAmongPredefinedCategories=function(entryCategories){
             }
 
             for(var childCount=0;childCount<lengthOfParentGroup;childCount++){
-                if(categoryName===parentGroup[childCount].name){
+                if(categoryName.toLowerCase()===parentGroup[childCount].name.toLowerCase()){
+
+                    if(parentGroup[childCount].passAttributeToChild !== 'undefined' && parentGroup[childCount].passAttributeToChild){
+                        if(typeof parentGroup[childCount].attributes !== 'undefined'){
+                            lastGlobalAttributes=parentGroup[childCount].attributes
+                        }
+                    }
+
+                    if(lastGlobalAttributes.length!==0 || typeof parentGroup[childCount].attributes !== 'undefined'){
+                        const thisCategory=parentGroup[childCount].name
+                        const duplicateCheck=maintainStandardCategoryAttributes.filter(standAtt => standAtt.category === thisCategory)
+                        if(duplicateCheck.length===0){
+                            maintainStandardCategoryAttributes.push({
+                                category:thisCategory,
+                                attributes:typeof parentGroup[childCount].attributes !== 'undefined' ? parentGroup[childCount].attributes : lastGlobalAttributes,
+                            })
+                        }
+                    }
+
                     parentGroup=parentGroup[childCount].child
                     break
                 }
@@ -83,7 +102,11 @@ const isAmongPredefinedCategories=function(entryCategories){
             return null;
         }
         )
+        lastGlobalAttributes=[]
         return null;
     })
     return errorType;
 }
+
+let maintainStandardCategoryAttributes=[]
+let lastGlobalAttributes=[]
