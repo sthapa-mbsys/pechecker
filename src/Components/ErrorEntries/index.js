@@ -1,6 +1,5 @@
 import ErrorEntry from '../ErrorEntry'
 import {useSelector} from 'react-redux'
-import {CSVDownloader} from 'react-papaparse'
 
 const ErrorEntries=function(){
 
@@ -33,16 +32,72 @@ const ErrorEntries=function(){
             {errorEntries.map((errorEntry,index)=><ErrorEntry errorEntry={errorEntry} key={index}/>)}
             </tbody>
         </table>
-       <CSVDownloader type="button" data={getErrorData(errorEntries)} filename={todayDate()+"_errorfile"}>Download</CSVDownloader>
+       <button type="button" onClick={()=>{downloadErrorFile(errorEntries)}}>Download</button>
         </>
     }
         </>
     )
 }
 
+const downloadErrorFile = function(errorEntries){
+    const downloadLink = document.getElementById("errorFileDownloadLink");
+    if(!downloadLink){
+    const data=getErrorData(errorEntries);
+
+    if(typeof data !== "object" || typeof data[0] !== "object") return;
+
+    const filename=todayDate()+"_errorfile"
+    
+    let csv='data:text/csv;charset=utf-8,';
+        // construct headers
+
+    let first=true;
+        Object.keys(data[0]).map((dataKey)=>{
+           if(first){
+            csv+=dataKey
+            first=false;
+           }
+           else{
+            csv+=","+dataKey
+           }
+            return null;
+        })
+        csv+='\n';
+
+        // construct data
+        data.map(errorData => {
+            first=true;
+            Object.keys(errorData).map((key)=>{
+               let dataContent = errorData[key].replaceAll('#','') 
+                
+               if(first){
+                csv+=dataContent
+                first=false
+               }
+               else{
+                csv+=','+dataContent
+               }
+                return null
+            })
+            csv+='\n'
+            return null
+        })     
+        const errorFileLink = document.createElement("a");
+        errorFileLink.setAttribute("id","errorFileDownloadLink");
+        errorFileLink.setAttribute("href",encodeURI(csv));
+        errorFileLink.setAttribute("download",filename+".csv")
+
+        document.body.appendChild(errorFileLink)
+        errorFileLink.click();
+    }
+    else
+    {
+        downloadLink.click();
+    }
+}
+
 function getErrorData(errors){
     let data=[]
-  
     errors.map(err=>{
         let newErrorData={}
         newErrorData.name=err.name
@@ -56,7 +111,6 @@ function getErrorData(errors){
         data.push(newErrorData)
         return null;
     })
-
     return data
 
 }
