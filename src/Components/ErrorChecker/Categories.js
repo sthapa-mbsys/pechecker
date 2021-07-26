@@ -1464,6 +1464,10 @@ export const GetCategories=function(){
                         {
                             name:"Side By Side Refrigerator",
                             child:[]
+                        },
+                        {
+                            name:"Part and Accessories",
+                            child:[]
                         }
                     ]
                 },
@@ -3073,6 +3077,14 @@ export const GetCategories=function(){
                                 },
                                 {
                                     name:"Water Purifier",
+                                    child:[]
+                                },
+                                {
+                                    name:"Dish Drainer Rack",
+                                    child:[]
+                                },
+                                {
+                                    name:"Sel-Roti Maker",
                                     child:[]
                                 }
                             ]
