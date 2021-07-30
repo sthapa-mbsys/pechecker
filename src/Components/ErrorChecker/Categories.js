@@ -2197,6 +2197,15 @@ export const GetCategories=function(){
                         "Quantity",
                         "Volume"
                     ]
+                },
+                {
+                    name:"Cooking & Baking Supplies",
+                    child:[
+                        {
+                            name:"Baking Supplies",
+                            child:[]
+                        }
+                    ]
                 }
             ]
         },
