@@ -140,7 +140,7 @@ const validateAttributeFormat=function(attributeName,attributeValue){
                   return ""
               }
               if(attributeFormatData[attCount].shouldHaveNumber && attributeFormatData[attCount].shouldHaveNumber==="partial"){
-                if(attributeValue===attributeFormatData[attCount].units[unitCount]){
+                if(attributeValue===attributeFormatData[attCount].units[unitCount] || !isNaN(attributeValue)){
                     return ""
                 }
               }
