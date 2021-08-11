@@ -3095,6 +3095,10 @@ export const GetCategories=function(){
                                 {
                                     name:"Sel-Roti Maker",
                                     child:[]
+                                },
+                                {
+                                    name:"Gas Cylinder",
+                                    child:[]
                                 }
                             ]
                         },
