@@ -3642,7 +3642,12 @@ export const GetCategories = function () {
             },
             {
                 name: "Sweets",
-                child: []
+                child: [
+                    {
+                        name: "Desi Sweets",
+                        child: []
+                    }
+                ]
             }
         ]
     }
