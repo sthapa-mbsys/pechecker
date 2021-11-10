@@ -1,79 +1,78 @@
-import {AttributeFormats} from './AttributeFormats'
-import {attributeInCategoryCheck} from './AttributeInCategoryChecker'
-export const AttributeFormatChecker=function(thisData,header,hasCategoryError=false,standardCategoryAttributes=[]){
-    var attributeNameLocations=[],attributeValueLocations=[],currentHead,errors=[],errorType="",attributeDefaults=[]
-    const attributeNamesToAvoid=["type"]
-    header.map((head,index)=>{
-        if(!head) return null
-        currentHead=head.replace(/[0-9]/g,'')
-        if(currentHead.toLowerCase()==="attribute  name"){
+import { AttributeFormats } from './AttributeFormats'
+import { attributeInCategoryCheck } from './AttributeInCategoryChecker'
+export const AttributeFormatChecker = function (thisData, header, hasCategoryError = false, standardCategoryAttributes = []) {
+    var attributeNameLocations = [], attributeValueLocations = [], currentHead, errors = [], errorType = "", attributeDefaults = []
+    const attributeNamesToAvoid = ["type"]
+    header.map((head, index) => {
+        if (!head) return null
+        currentHead = head.replace(/[0-9]/g, '')
+        if (currentHead.toLowerCase() === "attribute  name") {
             attributeNameLocations.push(index)
         }
-        else if(currentHead.toLowerCase()==="attribute  value(s)")
-        {
+        else if (currentHead.toLowerCase() === "attribute  value(s)") {
             attributeValueLocations.push(index)
         }
-        else if(currentHead.trim().toLowerCase()==="attribute  default"){
-            attributeDefaults=attributeDefaults.concat([
+        else if (currentHead.trim().toLowerCase() === "attribute  default") {
+            attributeDefaults = attributeDefaults.concat([
                 {
-                    "defaultLocation":index,
-                    "lastValueLocation":attributeValueLocations[attributeValueLocations.length-1]
+                    "defaultLocation": index,
+                    "lastValueLocation": attributeValueLocations[attributeValueLocations.length - 1]
                 }
             ]);
         }
         return null
     })
 
-    if(attributeNameLocations.length!==attributeValueLocations.length){
+    if (attributeNameLocations.length !== attributeValueLocations.length) {
         return {
-            error:true,
-            errorType:"Attribute name and value header not equal "
+            error: true,
+            errorType: "Attribute name and value header not equal "
         }
     }
 
     // check for attribute in actegory if no category error
-    if(!hasCategoryError){
-    const attributeAllowedInCategoryCheck=attributeInCategoryCheck(attributeNameLocations.map(nameIndex=>thisData[nameIndex]),thisData[header.findIndex(k=>k.toLowerCase().trim()==="categories")],standardCategoryAttributes)
+    if (!hasCategoryError) {
+        const attributeAllowedInCategoryCheck = attributeInCategoryCheck(attributeNameLocations.map(nameIndex => thisData[nameIndex]), thisData[header.findIndex(k => k.toLowerCase().trim() === "categories")], standardCategoryAttributes)
 
-    if(attributeAllowedInCategoryCheck){
-        return {
-            error:true,
-            errorType:attributeAllowedInCategoryCheck
+        if (attributeAllowedInCategoryCheck) {
+            return {
+                error: true,
+                errorType: attributeAllowedInCategoryCheck
+            }
         }
     }
-    }
 
-    attributeDefaults.forEach(defData=>{
-        if(defData.defaultLocation && defData.lastValueLocation){
-            if(thisData[defData.defaultLocation].trim()!=="" && thisData[defData.lastValueLocation].indexOf(thisData[defData.defaultLocation])===-1){
-                errors.push("Default attribute value "+thisData[defData.defaultLocation]+" is not among attibute values ");
+    attributeDefaults.forEach(defData => {
+        if (defData.defaultLocation && defData.lastValueLocation) {
+            if (thisData[defData.defaultLocation].trim() !== "" && thisData[defData.lastValueLocation].indexOf(thisData[defData.defaultLocation]) === -1) {
+                errors.push("Default attribute value " + thisData[defData.defaultLocation] + " is not among attibute values ");
             }
         }
     })
 
-    attributeNameLocations.map((nameLocation,index)=>{
-        const attValues=thisData[attributeValueLocations[index]].toLowerCase();
+    attributeNameLocations.map((nameLocation, index) => {
+        const attValues = thisData[attributeValueLocations[index]].toLowerCase();
 
-        if(attributeNamesToAvoid.indexOf(thisData[nameLocation].toLowerCase())!==-1){
-            errors.push("Invalid attribute name "+thisData[nameLocation]);
+        if (attributeNamesToAvoid.indexOf(thisData[nameLocation].toLowerCase()) !== -1) {
+            errors.push("Invalid attribute name " + thisData[nameLocation]);
             return null;
         }
 
-        if(thisData[nameLocation]!=="" && thisData[attributeValueLocations[index]]===""){
-            errors.push("No value for attribute "+thisData[nameLocation]);
+        if (thisData[nameLocation] !== "" && thisData[attributeValueLocations[index]] === "") {
+            errors.push("No value for attribute " + thisData[nameLocation]);
         }
 
-        if(thisData[nameLocation]==="" && thisData[attributeValueLocations[index]]!==""){
-            errors.push("No attribute name for "+thisData[attributeValueLocations[index]]);
+        if (thisData[nameLocation] === "" && thisData[attributeValueLocations[index]] !== "") {
+            errors.push("No attribute name for " + thisData[attributeValueLocations[index]]);
         }
 
-        if(attValues.indexOf(" and ")!==-1 || attValues.indexOf("&")!==-1 || attValues.indexOf("/")!==-1 || attValues.indexOf("\\")!==-1 || attValues.indexOf("+")!==-1){
-            errors.push("Possible concatinated value for "+thisData[nameLocation]+", seperate it by comma");
+        if (attValues.indexOf(" and ") !== -1 || attValues.indexOf("&") !== -1 || attValues.indexOf("/") !== -1 || attValues.indexOf("\\") !== -1 || attValues.indexOf("+") !== -1) {
+            errors.push("Possible concatinated value for " + thisData[nameLocation] + ", seperate it by comma");
             return null;
         }
 
-        let allAttributeValues=thisData[attributeValueLocations[index]].split(",")
-        for(var thisAttributeCount=0;thisAttributeCount<allAttributeValues.length;thisAttributeCount++){
+        let allAttributeValues = thisData[attributeValueLocations[index]].split(",")
+        for (var thisAttributeCount = 0; thisAttributeCount < allAttributeValues.length; thisAttributeCount++) {
             // attValStart=0
             // attValueEnd=allAttributeValues[thisAttributeCount].length
 
@@ -91,63 +90,63 @@ export const AttributeFormatChecker=function(thisData,header,hasCategoryError=fa
             //     }
             // }
 
-            allAttributeValues[thisAttributeCount]= allAttributeValues[thisAttributeCount].trim()
+            allAttributeValues[thisAttributeCount] = allAttributeValues[thisAttributeCount].trim()
 
-            if(allAttributeValues[thisAttributeCount].length>15){
-                errors.push("Lengthy attribute value "+allAttributeValues[thisAttributeCount]);
+            if (allAttributeValues[thisAttributeCount].length > 15) {
+                errors.push("Lengthy attribute value " + allAttributeValues[thisAttributeCount]);
             }
 
-        errors.push(validateAttributeFormat(thisData[nameLocation],allAttributeValues[thisAttributeCount]))
+            errors.push(validateAttributeFormat(thisData[nameLocation], allAttributeValues[thisAttributeCount]))
         }
         return null
     })
 
-    errors.map(err=>{
-        if(err!==""){
-            if(errorType!==""){
-                errorType+=" --- "
+    errors.map(err => {
+        if (err !== "") {
+            if (errorType !== "") {
+                errorType += " --- "
             }
-            errorType+=err
+            errorType += err
         }
         return null;
     })
 
-    if(errorType!==""){
+    if (errorType !== "") {
         return {
-            error:true,
+            error: true,
             errorType
         }
     }
 
     return {
-        error:false
+        error: false
     }
 }
 
-const validateAttributeFormat=function(attributeName,attributeValue){
-    let attributeFormatData=AttributeFormats(),regex
-    attributeFormatData=attributeFormatData.attributeFormats
-    for(var attCount=0;attCount<attributeFormatData.length;attCount++){
-        if(attributeName===attributeFormatData[attCount].name){
-          for(var unitCount=0;unitCount<attributeFormatData[attCount].units.length;unitCount++){
-              if(attributeFormatData[attCount].space){
-              regex=new RegExp(`\\d (${attributeFormatData[attCount].units[unitCount]})$`)
-              }
-              else{
-                regex=new RegExp(`\\d(${attributeFormatData[attCount].units[unitCount]})$`)
-              }
-              if(attributeValue.match(regex)){
-                  return ""
-              }
-              if(attributeFormatData[attCount].shouldHaveNumber && attributeFormatData[attCount].shouldHaveNumber==="partial"){
-                if(attributeValue===attributeFormatData[attCount].units[unitCount] || !isNaN(attributeValue)){
+const validateAttributeFormat = function (attributeName, attributeValue) {
+    let attributeFormatData = AttributeFormats(), regex
+    attributeFormatData = attributeFormatData.attributeFormats
+    for (var attCount = 0; attCount < attributeFormatData.length; attCount++) {
+        if (attributeName.trim().toLowerCase() === attributeFormatData[attCount].name.toLowerCase()) {
+            for (var unitCount = 0; unitCount < attributeFormatData[attCount].units.length; unitCount++) {
+                if (attributeFormatData[attCount].space) {
+                    regex = new RegExp(`\\d (${attributeFormatData[attCount].units[unitCount]})$`)
+                }
+                else {
+                    regex = new RegExp(`\\d(${attributeFormatData[attCount].units[unitCount]})$`)
+                }
+                if (attributeValue.match(regex)) {
                     return ""
                 }
-              }
-              if(unitCount===attributeFormatData[attCount].units.length-1){
-                return "Invalid attribute format "+attributeName+":"+attributeValue+""
-              }
-          }
+                if (attributeFormatData[attCount].shouldHaveNumber && attributeFormatData[attCount].shouldHaveNumber === "partial") {
+                    if (attributeValue === attributeFormatData[attCount].units[unitCount] || !isNaN(attributeValue)) {
+                        return ""
+                    }
+                }
+                if (unitCount === attributeFormatData[attCount].units.length - 1) {
+                    return "Invalid attribute format " + attributeName + ":" + attributeValue + ""
+                }
+            }
         }
     }
 
