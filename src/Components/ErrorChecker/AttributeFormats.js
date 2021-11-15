@@ -25,7 +25,7 @@ export const AttributeFormats = function () {
                 name: "Size",
                 space: true,
                 shouldHaveNumber: 'partial',
-                units: ["mm", "cm", "inches", "pulls", "XS", "S", "M", "L", "XL", "2XL", "3XL", "King", "Twin", "Queen"]
+                units: ["mm", "cm", "inches", "pulls", "XS", "S", "M", "L", "XL", "2XL", "3XL", "King", "Twin", "Queen", "Free"]
             },
             {
                 name: "Screen Size",
