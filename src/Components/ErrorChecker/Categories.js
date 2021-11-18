@@ -1240,7 +1240,7 @@ export const GetCategories = function () {
                 ]
             },
             {
-                name: "Kid's & Junior's Fashion",
+                name: "Kids' & Junior's Fashion",
                 child: [
                     {
                         name: "Boys' Clothing",
