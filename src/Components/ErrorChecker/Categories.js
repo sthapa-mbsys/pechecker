@@ -2364,7 +2364,7 @@ export const GetCategories = function () {
                         name: "Eyes",
                         child: [
                             {
-                                name: "Eyeliner",
+                                name: "Eye Liner",
                                 child: []
                             },
                             {
@@ -2377,6 +2377,10 @@ export const GetCategories = function () {
                             },
                             {
                                 name: "Mascara",
+                                child: []
+                            },
+                            {
+                                name: "Kajal",
                                 child: []
                             },
                             {
@@ -2464,7 +2468,7 @@ export const GetCategories = function () {
                         ]
                     },
                     {
-                        name: "Make-up Accessories",
+                        name: "Makeup Accessories",
                         child: [
                             {
                                 name: "Tweezers & Eyebrow Tools",
