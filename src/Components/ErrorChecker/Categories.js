@@ -773,6 +773,10 @@ export const GetCategories = function () {
                             {
                                 name: "Caps & Hats",
                                 child: []
+                            },
+                            {
+                                name: "Gloves",
+                                child: []
                             }
                         ]
                     },
@@ -780,7 +784,7 @@ export const GetCategories = function () {
                         name: "Bags & Wallets",
                         child: [
                             {
-                                name: "BagPacks",
+                                name: "Backpacks",
                                 child: []
                             },
                             {
@@ -797,6 +801,10 @@ export const GetCategories = function () {
                             },
                             {
                                 name: "Travel Bags & Luggages",
+                                child: []
+                            },
+                            {
+                                name: "Lunch Bag",
                                 child: []
                             }
                         ]
