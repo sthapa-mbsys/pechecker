@@ -598,7 +598,7 @@ export const GetCategories = function () {
                                     {
                                         name: "Sweaters & Cardigans",
                                         child: []
-                                    }
+                                    },
                                 ],
                                 attributes: [
                                     "Brand",
@@ -1068,6 +1068,10 @@ export const GetCategories = function () {
                                     },
                                     {
                                         name: "Blazer & Waistcoats",
+                                        child: []
+                                    },
+                                    {
+                                        name: "Neck Warmer & Hat",
                                         child: []
                                     }
                                 ],
