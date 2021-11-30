@@ -810,6 +810,10 @@ export const GetCategories = function () {
                             {
                                 name: "Lunch Bag",
                                 child: []
+                            },
+                            {
+                                name: "Laptop Bags & Accessories",
+                                child: []
                             }
                         ]
                     },
