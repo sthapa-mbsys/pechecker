@@ -2861,6 +2861,10 @@ export const GetCategories = function () {
                                 child: []
                             }
                         ]
+                    },
+                    {
+                        name: "Supplements",
+                        child: []
                     }
                 ]
             },
