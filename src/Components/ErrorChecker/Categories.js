@@ -2867,7 +2867,7 @@ export const GetCategories = function () {
                         ]
                     },
                     {
-                        name: "Supplements",
+                        name: "Nutrition & Supplements",
                         child: []
                     }
                 ]
