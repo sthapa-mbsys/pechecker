@@ -1549,7 +1549,16 @@ export const GetCategories = function () {
                     },
                     {
                         name: "Geyser",
-                        child: []
+                        child: [
+                            {
+                                name: "Gas Geyser",
+                                child: []
+                            },
+                            {
+                                name: "Electric Geyser",
+                                child: []
+                            }
+                        ]
                     },
                     {
                         name: "Freezers",
