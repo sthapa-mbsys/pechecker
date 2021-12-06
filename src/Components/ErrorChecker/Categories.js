@@ -1409,6 +1409,10 @@ export const GetCategories = function () {
                     {
                         name: "Shoes",
                         child: []
+                    },
+                    {
+                        name: "Socks",
+                        child: []
                     }
                 ]
             },
