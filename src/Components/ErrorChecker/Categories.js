@@ -1183,6 +1183,10 @@ export const GetCategories = function () {
                             {
                                 name: "Hair accessories",
                                 child: []
+                            },
+                            {
+                                name: "Socks",
+                                child: []
                             }
                         ],
                         attributes: [
