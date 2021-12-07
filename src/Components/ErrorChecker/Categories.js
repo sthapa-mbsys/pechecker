@@ -209,6 +209,10 @@ export const GetCategories = function () {
                         {
                             name: "Breast Relief Packs",
                             child: []
+                        },
+                        {
+                            name: "Breast Massage",
+                            child: []
                         }
                     ]
                 },
@@ -3336,6 +3340,15 @@ export const GetCategories = function () {
                                 name: "Spiritual Items",
                                 child: []
                             },
+                        ]
+                    },
+                    {
+                        name: "Home Fragranance",
+                        child: [
+                            {
+                                name: "Humidifier",
+                                child: []
+                            }
                         ]
                     }
                 ]
