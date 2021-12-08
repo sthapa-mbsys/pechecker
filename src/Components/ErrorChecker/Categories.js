@@ -211,7 +211,7 @@ export const GetCategories = function () {
                             child: []
                         },
                         {
-                            name: "Breast Massage",
+                            name: "Breast Massager",
                             child: []
                         }
                     ]
@@ -3343,7 +3343,7 @@ export const GetCategories = function () {
                         ]
                     },
                     {
-                        name: "Home Fragranance",
+                        name: "Home Fragrance",
                         child: [
                             {
                                 name: "Humidifier",
