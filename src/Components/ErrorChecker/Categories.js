@@ -61,6 +61,10 @@ export const GetCategories = function () {
                         {
                             name: "Air Purifier",
                             child: []
+                        },
+                        {
+                            name: "Ear Cleaner",
+                            child: []
                         }
                     ]
                 },
@@ -442,6 +446,10 @@ export const GetCategories = function () {
                                 {
                                     name: "Socks",
                                     child: []
+                                },
+                                {
+                                    name: "Baby Booties",
+                                    child: []
                                 }
                             ]
                         },
@@ -466,6 +474,10 @@ export const GetCategories = function () {
                                 },
                                 {
                                     name: "Socks",
+                                    child: []
+                                },
+                                {
+                                    name: "Baby Booties",
                                     child: []
                                 }
                             ]
