@@ -2417,7 +2417,7 @@ export const GetCategories = function () {
                         name: "Eyes",
                         child: [
                             {
-                                name: "Eye Liner",
+                                name: "Eyeliner",
                                 child: []
                             },
                             {
