@@ -35,7 +35,7 @@ export const AttributeFormats = function () {
             {
                 name: "Volume",
                 space: true,
-                units: ["ml"]
+                units: ["ml", "cc"]
             },
             {
                 name: "RAM",
