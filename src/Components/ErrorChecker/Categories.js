@@ -3535,7 +3535,7 @@ export const GetCategories = function () {
                 name: "Adventure & Recreation",
                 child: [
                     {
-                        name: "Cycling ",
+                        name: "Cycling",
                         child: []
                     },
                     {
