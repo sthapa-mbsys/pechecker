@@ -3718,6 +3718,20 @@ export const GetCategories = function () {
                         child: []
                     }
                 ]
+            },
+            {
+                name: "Hardware",
+                child: [
+                    {
+                        name: "Handware",
+                        child: [
+                            {
+                                name: "Tools Kit",
+                                child: []
+                            }
+                        ]
+                    }
+                ]
             }
         ]
     }
