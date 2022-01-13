@@ -3004,6 +3004,10 @@ export const GetCategories = function () {
                             {
                                 name: "Washing Machine Cover",
                                 child: []
+                            },
+                            {
+                                name: "Flower Pots",
+                                child: []
                             }
                         ]
                     },
