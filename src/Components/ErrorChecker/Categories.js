@@ -2,491 +2,6 @@ export const GetCategories = function () {
     return {
         "categories": [
             {
-                name: "Baby & Toys",
-                child: [{
-                    name: "Food",
-                    child: [{
-                        name: "Cerelac",
-                        child: []
-                    },
-                    {
-                        name: "Formulas",
-                        child: []
-                    },
-                    {
-                        name: "Snacks",
-                        child: []
-                    }
-                    ]
-                },
-                {
-                    name: "Feedings",
-                    child: [{
-                        name: "Utensils",
-                        child: []
-                    },
-                    {
-                        name: "Bottles & Accessories",
-                        child: []
-                    },
-                    {
-                        name: "Bibs & Burp Cloths",
-                        child: []
-                    }
-                    ]
-                },
-                {
-                    name: "Baby Care",
-                    child: [
-                        {
-                            name: "Pacifiers",
-                            child: []
-                        },
-                        {
-                            name: "Teethers",
-                            child: []
-                        },
-                        {
-                            name: "Nail Trimmers",
-                            child: []
-                        },
-                        {
-                            name: "Decor",
-                            child: []
-                        },
-                        {
-                            name: "Baby Monitor",
-                            child: []
-                        },
-                        {
-                            name: "Air Purifier",
-                            child: []
-                        },
-                        {
-                            name: "Ear Cleaner",
-                            child: []
-                        }
-                    ]
-                },
-                {
-                    name: "Diapers & Potty",
-                    child: [
-                        {
-                            name: "Diapers",
-                            child: []
-                        },
-                        {
-                            name: "Wipes",
-                            child: []
-                        },
-                        {
-                            name: "Diaper Rash cream",
-                            child: []
-                        },
-                        {
-                            name: "Diaper Bag",
-                            child: []
-                        },
-                        {
-                            name: "Diaper Bin",
-                            child: []
-                        },
-                        {
-                            name: "Diaper Changing station",
-                            child: []
-                        },
-                        {
-                            name: "Potty seats",
-                            child: []
-                        },
-                        {
-                            name: "Diaper Disposable Bags",
-                            child: []
-                        }
-                    ]
-                },
-                {
-                    name: "Bath & Personal care",
-                    child: [
-                        {
-                            name: "Soap",
-                            child: []
-                        },
-                        {
-                            name: "Body Wash",
-                            child: []
-                        },
-                        {
-                            name: "Shampoo",
-                            child: []
-                        },
-                        {
-                            name: "Conditioners",
-                            child: []
-                        },
-                        {
-                            name: "Shampoo Repellent Caps",
-                            child: []
-                        },
-                        {
-                            name: "Face Wipes",
-                            child: []
-                        },
-                        {
-                            name: "Skin Care",
-                            child: []
-                        },
-                        {
-                            name: "Oral Care",
-                            child: []
-                        },
-                        {
-                            name: "Powder",
-                            child: []
-                        },
-                        {
-                            name: "Lotions",
-                            child: []
-                        },
-                        {
-                            name: "Sunscreen",
-                            child: []
-                        },
-                        {
-                            name: "Hair Care",
-                            child: []
-                        },
-                        {
-                            name: "Rash Cream",
-                            child: []
-                        },
-                        {
-                            name: "Massage Oil",
-                            child: []
-                        }
-                    ]
-                },
-                {
-                    name: "Bath Accessories",
-                    child: [
-                        {
-                            name: "Bath Towel",
-                            child: []
-                        },
-                        {
-                            name: "Bath Tub",
-                            child: []
-                        },
-                        {
-                            name: "Bath Tub toys",
-                            child: []
-                        },
-                        {
-                            name: "Bath Sponges",
-                            child: []
-                        },
-                        {
-                            name: "Bubble Bath Soaps",
-                            child: []
-                        },
-                        {
-                            name: "Bath Pool",
-                            child: []
-                        }
-                    ]
-                },
-                {
-                    name: "Nursing",
-                    child: [
-                        {
-                            name: "Breast Pumps",
-                            child: []
-                        },
-                        {
-                            name: "Pregnancy Pillow",
-                            child: []
-                        },
-                        {
-                            name: "Breast Milk Storage Bags",
-                            child: []
-                        },
-                        {
-                            name: "Breast Relief Packs",
-                            child: []
-                        },
-                        {
-                            name: "Breast Massager",
-                            child: []
-                        }
-                    ]
-                },
-                {
-                    name: "Baby Bedding",
-                    child: [
-                        {
-                            name: "Mats",
-                            child: []
-                        },
-                        {
-                            name: "Crib & Bassinets",
-                            child: []
-                        },
-                        {
-                            name: "Bed Protector",
-                            child: []
-                        },
-                        {
-                            name: "Blankets",
-                            child: []
-                        },
-                        {
-                            name: "Mosquito Nets",
-                            child: []
-                        },
-                        {
-                            name: "Bedsheets",
-                            child: []
-                        },
-                        {
-                            name: "Mattress",
-                            child: []
-                        },
-                        {
-                            name: "Travel & Play Tents",
-                            child: []
-                        },
-                        {
-                            name: "Pillows",
-                            child: []
-                        }
-                    ]
-                },
-                {
-                    name: "Baby Gears",
-                    child: [
-                        {
-                            name: "High Chairs",
-                            child: []
-                        },
-                        {
-                            name: "Swings",
-                            child: []
-                        },
-                        {
-                            name: "Car Seats",
-                            child: []
-                        },
-                        {
-                            name: "Walkers",
-                            child: []
-                        },
-                        {
-                            name: "Booster Seats",
-                            child: []
-                        },
-                        {
-                            name: "Strollers",
-                            child: []
-                        },
-                        {
-                            name: "Carriers",
-                            child: []
-                        },
-                        {
-                            name: "Step Stools",
-                            child: []
-                        }
-                    ]
-                },
-                {
-                    name: "Health & Safety",
-                    child: [
-                        {
-                            name: "Nasal Aspirators",
-                            child: []
-                        },
-                        {
-                            name: "Pain Relief",
-                            child: []
-                        },
-                        {
-                            name: "Thermometers",
-                            child: []
-                        },
-                        {
-                            name: "Sanitizers",
-                            child: []
-                        },
-                        {
-                            name: "Bottle Warmers",
-                            child: []
-                        },
-                        {
-                            name: "Outlet plugs",
-                            child: []
-                        },
-                        {
-                            name: "Edge protections",
-                            child: []
-                        },
-                        {
-                            name: "Baby Scale",
-                            child: []
-                        }
-                    ]
-                },
-                {
-                    name: "Cleaning & Detergents",
-                    child: [
-                        {
-                            name: "Laundary detergents",
-                            child: []
-                        },
-                        {
-                            name: "Fabric Softners",
-                            child: []
-                        }
-                    ]
-                },
-                {
-                    name: "Toys",
-                    child: [
-                        {
-                            name: "Remote control toys",
-                            child: []
-                        },
-                        {
-                            name: "Learning and educational toys",
-                            child: []
-                        },
-                        {
-                            name: "Soft toys",
-                            child: []
-                        },
-                        {
-                            name: "Puzzles",
-                            child: []
-                        },
-                        {
-                            name: "Outdoor toys",
-                            child: []
-                        },
-                        {
-                            name: "Card games",
-                            child: []
-                        },
-                        {
-                            name: "Toy cars",
-                            child: []
-                        },
-                        {
-                            name: "Trains",
-                            child: []
-                        },
-                        {
-                            name: "Bikes",
-                            child: []
-                        },
-                        {
-                            name: "Dolls",
-                            child: []
-                        },
-                        {
-                            name: "Doll houses",
-                            child: []
-                        },
-                        {
-                            name: "Toy sport",
-                            child: []
-                        },
-                        {
-                            name: "Tricycles",
-                            child: []
-                        },
-                        {
-                            name: "Sports",
-                            child: []
-                        },
-                        {
-                            name: "Blocks",
-                            child: []
-                        },
-                        {
-                            name: "Lego",
-                            child: []
-                        },
-                        {
-                            name: "Trampoline",
-                            child: []
-                        }
-                    ]
-                },
-                {
-                    name: "Clothings",
-                    child: [
-                        {
-                            name: "Boys",
-                            child: [
-                                {
-                                    name: "Combos sets",
-                                    child: []
-                                },
-                                {
-                                    name: "T-shirts",
-                                    child: []
-                                },
-                                {
-                                    name: "Bodysuits",
-                                    child: []
-                                },
-                                {
-                                    name: "Newborn Clothing",
-                                    child: []
-                                },
-                                {
-                                    name: "Socks",
-                                    child: []
-                                },
-                                {
-                                    name: "Baby Booties",
-                                    child: []
-                                }
-                            ]
-                        },
-                        {
-                            name: "Girls",
-                            child: [
-                                {
-                                    name: "Combos Sets",
-                                    child: []
-                                },
-                                {
-                                    name: "Dresses & Gowns",
-                                    child: []
-                                },
-                                {
-                                    name: "Bodysuits",
-                                    child: []
-                                },
-                                {
-                                    name: "Swaddles",
-                                    child: []
-                                },
-                                {
-                                    name: "Socks",
-                                    child: []
-                                },
-                                {
-                                    name: "Baby Booties",
-                                    child: []
-                                }
-                            ]
-                        }
-                    ]
-                }
-                ]
-            },
-            {
                 name: "Men's Fashion",
                 child: [
                     {
@@ -1280,7 +795,7 @@ export const GetCategories = function () {
                 ]
             },
             {
-                name: "Kids' & Junior's Fashion",
+                name: "Kids' Zone",
                 child: [
                     {
                         name: "Boys' Clothing",
@@ -1429,12 +944,757 @@ export const GetCategories = function () {
                     {
                         name: "Socks",
                         child: []
+                    },
+                    {
+                        name: "Food",
+                        child: [{
+                            name: "Cerelac",
+                            child: []
+                        },
+                        {
+                            name: "Formulas",
+                            child: []
+                        },
+                        {
+                            name: "Snacks",
+                            child: []
+                        }
+                        ]
+                    },
+                    {
+                        name: "Feedings",
+                        child: [{
+                            name: "Utensils",
+                            child: []
+                        },
+                        {
+                            name: "Bottles & Accessories",
+                            child: []
+                        },
+                        {
+                            name: "Bibs & Burp Cloths",
+                            child: []
+                        }
+                        ]
+                    },
+                    {
+                        name: "Baby Care",
+                        child: [
+                            {
+                                name: "Pacifiers",
+                                child: []
+                            },
+                            {
+                                name: "Teethers",
+                                child: []
+                            },
+                            {
+                                name: "Nail Trimmers",
+                                child: []
+                            },
+                            {
+                                name: "Decor",
+                                child: []
+                            },
+                            {
+                                name: "Baby Monitor",
+                                child: []
+                            },
+                            {
+                                name: "Air Purifier",
+                                child: []
+                            },
+                            {
+                                name: "Ear Cleaner",
+                                child: []
+                            }
+                        ]
+                    },
+                    {
+                        name: "Diapers & Potty",
+                        child: [
+                            {
+                                name: "Diapers",
+                                child: []
+                            },
+                            {
+                                name: "Wipes",
+                                child: []
+                            },
+                            {
+                                name: "Diaper Rash cream",
+                                child: []
+                            },
+                            {
+                                name: "Diaper Bag",
+                                child: []
+                            },
+                            {
+                                name: "Diaper Bin",
+                                child: []
+                            },
+                            {
+                                name: "Diaper Changing station",
+                                child: []
+                            },
+                            {
+                                name: "Potty seats",
+                                child: []
+                            },
+                            {
+                                name: "Diaper Disposable Bags",
+                                child: []
+                            }
+                        ]
+                    },
+                    {
+                        name: "Bath & Personal care",
+                        child: [
+                            {
+                                name: "Soap",
+                                child: []
+                            },
+                            {
+                                name: "Body Wash",
+                                child: []
+                            },
+                            {
+                                name: "Shampoo",
+                                child: []
+                            },
+                            {
+                                name: "Conditioners",
+                                child: []
+                            },
+                            {
+                                name: "Shampoo Repellent Caps",
+                                child: []
+                            },
+                            {
+                                name: "Face Wipes",
+                                child: []
+                            },
+                            {
+                                name: "Skin Care",
+                                child: []
+                            },
+                            {
+                                name: "Oral Care",
+                                child: []
+                            },
+                            {
+                                name: "Powder",
+                                child: []
+                            },
+                            {
+                                name: "Lotions",
+                                child: []
+                            },
+                            {
+                                name: "Sunscreen",
+                                child: []
+                            },
+                            {
+                                name: "Hair Care",
+                                child: []
+                            },
+                            {
+                                name: "Rash Cream",
+                                child: []
+                            },
+                            {
+                                name: "Massage Oil",
+                                child: []
+                            }
+                        ]
+                    },
+                    {
+                        name: "Bath Accessories",
+                        child: [
+                            {
+                                name: "Bath Towel",
+                                child: []
+                            },
+                            {
+                                name: "Bath Tub",
+                                child: []
+                            },
+                            {
+                                name: "Bath Tub toys",
+                                child: []
+                            },
+                            {
+                                name: "Bath Sponges",
+                                child: []
+                            },
+                            {
+                                name: "Bubble Bath Soaps",
+                                child: []
+                            },
+                            {
+                                name: "Bath Pool",
+                                child: []
+                            }
+                        ]
+                    },
+                    {
+                        name: "Nursing",
+                        child: [
+                            {
+                                name: "Breast Pumps",
+                                child: []
+                            },
+                            {
+                                name: "Pregnancy Pillow",
+                                child: []
+                            },
+                            {
+                                name: "Breast Milk Storage Bags",
+                                child: []
+                            },
+                            {
+                                name: "Breast Relief Packs",
+                                child: []
+                            },
+                            {
+                                name: "Breast Massager",
+                                child: []
+                            }
+                        ]
+                    },
+                    {
+                        name: "Baby Bedding",
+                        child: [
+                            {
+                                name: "Mats",
+                                child: []
+                            },
+                            {
+                                name: "Crib & Bassinets",
+                                child: []
+                            },
+                            {
+                                name: "Bed Protector",
+                                child: []
+                            },
+                            {
+                                name: "Blankets",
+                                child: []
+                            },
+                            {
+                                name: "Mosquito Nets",
+                                child: []
+                            },
+                            {
+                                name: "Bedsheets",
+                                child: []
+                            },
+                            {
+                                name: "Mattress",
+                                child: []
+                            },
+                            {
+                                name: "Travel & Play Tents",
+                                child: []
+                            },
+                            {
+                                name: "Pillows",
+                                child: []
+                            }
+                        ]
+                    },
+                    {
+                        name: "Baby Gears",
+                        child: [
+                            {
+                                name: "High Chairs",
+                                child: []
+                            },
+                            {
+                                name: "Swings",
+                                child: []
+                            },
+                            {
+                                name: "Car Seats",
+                                child: []
+                            },
+                            {
+                                name: "Walkers",
+                                child: []
+                            },
+                            {
+                                name: "Booster Seats",
+                                child: []
+                            },
+                            {
+                                name: "Strollers",
+                                child: []
+                            },
+                            {
+                                name: "Carriers",
+                                child: []
+                            },
+                            {
+                                name: "Step Stools",
+                                child: []
+                            }
+                        ]
+                    },
+                    {
+                        name: "Health & Safety",
+                        child: [
+                            {
+                                name: "Nasal Aspirators",
+                                child: []
+                            },
+                            {
+                                name: "Pain Relief",
+                                child: []
+                            },
+                            {
+                                name: "Thermometers",
+                                child: []
+                            },
+                            {
+                                name: "Sanitizers",
+                                child: []
+                            },
+                            {
+                                name: "Bottle Warmers",
+                                child: []
+                            },
+                            {
+                                name: "Outlet plugs",
+                                child: []
+                            },
+                            {
+                                name: "Edge protections",
+                                child: []
+                            },
+                            {
+                                name: "Baby Scale",
+                                child: []
+                            }
+                        ]
+                    },
+                    {
+                        name: "Cleaning & Detergents",
+                        child: [
+                            {
+                                name: "Laundary detergents",
+                                child: []
+                            },
+                            {
+                                name: "Fabric Softners",
+                                child: []
+                            }
+                        ]
+                    },
+                    {
+                        name: "Toys",
+                        child: [
+                            {
+                                name: "Remote control toys",
+                                child: []
+                            },
+                            {
+                                name: "Learning and educational toys",
+                                child: []
+                            },
+                            {
+                                name: "Soft toys",
+                                child: []
+                            },
+                            {
+                                name: "Puzzles",
+                                child: []
+                            },
+                            {
+                                name: "Outdoor toys",
+                                child: []
+                            },
+                            {
+                                name: "Card games",
+                                child: []
+                            },
+                            {
+                                name: "Toy cars",
+                                child: []
+                            },
+                            {
+                                name: "Trains",
+                                child: []
+                            },
+                            {
+                                name: "Bikes",
+                                child: []
+                            },
+                            {
+                                name: "Dolls",
+                                child: []
+                            },
+                            {
+                                name: "Doll houses",
+                                child: []
+                            },
+                            {
+                                name: "Toy sport",
+                                child: []
+                            },
+                            {
+                                name: "Tricycles",
+                                child: []
+                            },
+                            {
+                                name: "Sports",
+                                child: []
+                            },
+                            {
+                                name: "Blocks",
+                                child: []
+                            },
+                            {
+                                name: "Lego",
+                                child: []
+                            },
+                            {
+                                name: "Trampoline",
+                                child: []
+                            }
+                        ]
+                    },
+                    {
+                        name: "Clothings",
+                        child: [
+                            {
+                                name: "Boys",
+                                child: [
+                                    {
+                                        name: "Combos sets",
+                                        child: []
+                                    },
+                                    {
+                                        name: "T-shirts",
+                                        child: []
+                                    },
+                                    {
+                                        name: "Bodysuits",
+                                        child: []
+                                    },
+                                    {
+                                        name: "Newborn Clothing",
+                                        child: []
+                                    },
+                                    {
+                                        name: "Socks",
+                                        child: []
+                                    },
+                                    {
+                                        name: "Baby Booties",
+                                        child: []
+                                    }
+                                ]
+                            },
+                            {
+                                name: "Girls",
+                                child: [
+                                    {
+                                        name: "Combos Sets",
+                                        child: []
+                                    },
+                                    {
+                                        name: "Dresses & Gowns",
+                                        child: []
+                                    },
+                                    {
+                                        name: "Bodysuits",
+                                        child: []
+                                    },
+                                    {
+                                        name: "Swaddles",
+                                        child: []
+                                    },
+                                    {
+                                        name: "Socks",
+                                        child: []
+                                    },
+                                    {
+                                        name: "Baby Booties",
+                                        child: []
+                                    }
+                                ]
+                            }
+                        ]
                     }
                 ]
             },
             {
-                name: "TV & Appliances",
+                name: "Electronics & Appliances",
                 child: [
+                    {
+                        name: "Mobile",
+                        child: []
+                    },
+                    {
+                        name: "Mobile Accessories",
+                        child: [
+                            {
+                                name: "Chargers/ Datacables",
+                                child: []
+                            },
+                            {
+                                name: "Earphones",
+                                child: []
+                            },
+                            {
+                                name: "Earbuds",
+                                child: []
+                            },
+                            {
+                                name: "Headphones",
+                                child: []
+                            },
+                            {
+                                name: "Screen Protectors",
+                                child: []
+                            },
+                            {
+                                name: "Phone Case",
+                                child: []
+                            },
+                            {
+                                name: "Power Banks",
+                                child: []
+                            },
+                            {
+                                name: "Bluetooth Speakers",
+                                child: []
+                            },
+                            {
+                                name: "Selfie Stick & Gimbal",
+                                child: []
+                            },
+                            {
+                                name: "Memory Cards",
+                                child: []
+                            },
+                            {
+                                name: "Smart Headphones",
+                                child: []
+                            },
+                            {
+                                name: "Mobile Holder & Stand",
+                                child: []
+                            },
+                            {
+                                name: "Wireless Charger",
+                                child: []
+                            },
+                            {
+                                name: "Other Accessories",
+                                child: []
+                            }
+
+                        ]
+                    },
+                    {
+                        name: "Tablets",
+                        child: []
+                    },
+                    {
+                        name: "Tablet Accessories",
+                        child: [
+                            {
+                                name: "Screen protectors",
+                                child: []
+                            },
+                            {
+                                name: "keyboard case",
+                                child: []
+                            },
+                            {
+                                name: "Chargers",
+                                child: []
+                            }
+                        ]
+                    },
+                    {
+                        name: "Laptops",
+                        child: []
+                    },
+                    {
+                        name: "Desktops",
+                        child: []
+                    },
+                    {
+                        name: "Computer Accessories",
+                        child: [
+                            {
+                                name: "Hard Drives",
+                                child: []
+                            },
+                            {
+                                name: "Flash Drives",
+                                child: []
+                            },
+                            {
+                                name: "Laptop skins",
+                                child: []
+                            },
+                            {
+                                name: "Bags",
+                                child: []
+                            },
+                            {
+                                name: "Mouse",
+                                child: []
+                            },
+                            {
+                                name: "Keyboard",
+                                child: []
+                            },
+                            {
+                                name: "Power cables",
+                                child: []
+                            },
+                            {
+                                name: "HDMI Cables",
+                                child: []
+                            },
+                            {
+                                name: "webcams",
+                                child: []
+                            }
+                        ]
+                    },
+                    {
+                        name: "Printers & Supplies",
+                        child: [
+                            {
+                                name: "Printer",
+                                child: []
+                            },
+                            {
+                                name: "Ink",
+                                child: []
+                            },
+                            {
+                                name: "Paper",
+                                child: []
+                            },
+                            {
+                                name: "Scanners",
+                                child: []
+                            },
+                            {
+                                name: "Cables and connectors",
+                                child: []
+                            }
+                        ]
+                    },
+                    {
+                        name: "Networking Devices",
+                        child: [
+                            {
+                                name: "Router",
+                                child: []
+                            },
+                            {
+                                name: "Modems",
+                                child: []
+                            },
+                            {
+                                name: "Range Extenders",
+                                child: []
+                            },
+                            {
+                                name: "Huns & Switches",
+                                child: []
+                            },
+                            {
+                                name: "NAS",
+                                child: []
+                            },
+                            {
+                                name: "Cables and connectors",
+                                child: []
+                            },
+                            {
+                                name: "WIFI extenders",
+                                child: []
+                            }
+                        ]
+                    },
+                    {
+                        name: "Home Audio & Theatres",
+                        child: [
+                            {
+                                name: "Soundbars",
+                                child: []
+                            },
+                            {
+                                name: "Wireless & Bluetooth speakers",
+                                child: []
+                            },
+                            {
+                                name: "Home theatres system",
+                                child: []
+                            },
+                            {
+                                name: "Blu-ray players",
+                                child: []
+                            },
+                            {
+                                name: "Projectors",
+                                child: []
+                            },
+                            {
+                                name: "Woofers",
+                                child: []
+                            }
+                        ]
+                    },
+                    {
+                        name: "Photo & Video",
+                        child: [
+                            {
+                                name: "Camera",
+                                child: []
+                            },
+                            {
+                                name: "Tripods",
+                                child: []
+                            },
+                            {
+                                name: "Camera bundles",
+                                child: []
+                            },
+                            {
+                                name: "DSLR Camera",
+                                child: []
+                            },
+                            {
+                                name: "Mirrorless Camera",
+                                child: []
+                            },
+                            {
+                                name: "Point & Shoot Cameras",
+                                child: []
+                            },
+                            {
+                                name: "Drones",
+                                child: []
+                            },
+                            {
+                                name: "Action Cameras",
+                                child: []
+                            },
+                            {
+                                name: "Lenses",
+                                child: []
+                            }
+                        ]
+                    },
                     {
                         name: "TV",
                         child: [
@@ -1705,275 +1965,6 @@ export const GetCategories = function () {
                     {
                         name: "Immersion Rod",
                         child: []
-                    }
-                ]
-            },
-            {
-                name: "Electronics",
-                child: [
-                    {
-                        name: "Mobile",
-                        child: []
-                    },
-                    {
-                        name: "Mobile Accessories",
-                        child: [
-                            {
-                                name: "Chargers/ Datacables",
-                                child: []
-                            },
-                            {
-                                name: "Earphones",
-                                child: []
-                            },
-                            {
-                                name: "Earbuds",
-                                child: []
-                            },
-                            {
-                                name: "Headphones",
-                                child: []
-                            },
-                            {
-                                name: "Screen Protectors",
-                                child: []
-                            },
-                            {
-                                name: "Phone Case",
-                                child: []
-                            },
-                            {
-                                name: "Power Banks",
-                                child: []
-                            },
-                            {
-                                name: "Bluetooth Speakers",
-                                child: []
-                            },
-                            {
-                                name: "Selfie Stick & Gimbal",
-                                child: []
-                            },
-                            {
-                                name: "Memory Cards",
-                                child: []
-                            },
-                            {
-                                name: "Smart Headphones",
-                                child: []
-                            },
-                            {
-                                name: "Mobile Holder & Stand",
-                                child: []
-                            },
-                            {
-                                name: "Wireless Charger",
-                                child: []
-                            },
-                            {
-                                name: "Other Accessories",
-                                child: []
-                            }
-
-                        ]
-                    },
-                    {
-                        name: "Tablets",
-                        child: []
-                    },
-                    {
-                        name: "Tablet Accessories",
-                        child: [
-                            {
-                                name: "Screen protectors",
-                                child: []
-                            },
-                            {
-                                name: "keyboard case",
-                                child: []
-                            },
-                            {
-                                name: "Chargers",
-                                child: []
-                            }
-                        ]
-                    },
-                    {
-                        name: "Laptops",
-                        child: []
-                    },
-                    {
-                        name: "Desktops",
-                        child: []
-                    },
-                    {
-                        name: "Computer Accessories",
-                        child: [
-                            {
-                                name: "Hard Drives",
-                                child: []
-                            },
-                            {
-                                name: "Flash Drives",
-                                child: []
-                            },
-                            {
-                                name: "Laptop skins",
-                                child: []
-                            },
-                            {
-                                name: "Bags",
-                                child: []
-                            },
-                            {
-                                name: "Mouse",
-                                child: []
-                            },
-                            {
-                                name: "Keyboard",
-                                child: []
-                            },
-                            {
-                                name: "Power cables",
-                                child: []
-                            },
-                            {
-                                name: "HDMI Cables",
-                                child: []
-                            },
-                            {
-                                name: "webcams",
-                                child: []
-                            }
-                        ]
-                    },
-                    {
-                        name: "Printers & Supplies",
-                        child: [
-                            {
-                                name: "Printer",
-                                child: []
-                            },
-                            {
-                                name: "Ink",
-                                child: []
-                            },
-                            {
-                                name: "Paper",
-                                child: []
-                            },
-                            {
-                                name: "Scanners",
-                                child: []
-                            },
-                            {
-                                name: "Cables and connectors",
-                                child: []
-                            }
-                        ]
-                    },
-                    {
-                        name: "Networking Devices",
-                        child: [
-                            {
-                                name: "Router",
-                                child: []
-                            },
-                            {
-                                name: "Modems",
-                                child: []
-                            },
-                            {
-                                name: "Range Extenders",
-                                child: []
-                            },
-                            {
-                                name: "Huns & Switches",
-                                child: []
-                            },
-                            {
-                                name: "NAS",
-                                child: []
-                            },
-                            {
-                                name: "Cables and connectors",
-                                child: []
-                            },
-                            {
-                                name: "WIFI extenders",
-                                child: []
-                            }
-                        ]
-                    },
-                    {
-                        name: "Home Audio & Theatres",
-                        child: [
-                            {
-                                name: "Soundbars",
-                                child: []
-                            },
-                            {
-                                name: "Wireless & Bluetooth speakers",
-                                child: []
-                            },
-                            {
-                                name: "Home theatres system",
-                                child: []
-                            },
-                            {
-                                name: "Blu-ray players",
-                                child: []
-                            },
-                            {
-                                name: "Projectors",
-                                child: []
-                            },
-                            {
-                                name: "Woofers",
-                                child: []
-                            }
-                        ]
-                    },
-                    {
-                        name: "Photo & Video",
-                        child: [
-                            {
-                                name: "Camera",
-                                child: []
-                            },
-                            {
-                                name: "Tripods",
-                                child: []
-                            },
-                            {
-                                name: "Camera bundles",
-                                child: []
-                            },
-                            {
-                                name: "DSLR Camera",
-                                child: []
-                            },
-                            {
-                                name: "Mirrorless Camera",
-                                child: []
-                            },
-                            {
-                                name: "Point & Shoot Cameras",
-                                child: []
-                            },
-                            {
-                                name: "Drones",
-                                child: []
-                            },
-                            {
-                                name: "Action Cameras",
-                                child: []
-                            },
-                            {
-                                name: "Lenses",
-                                child: []
-                            }
-                        ]
                     }
 
                 ]
@@ -2263,8 +2254,146 @@ export const GetCategories = function () {
                 ]
             },
             {
-                name: "Makeup & Beauty",
+                name: "Cosmetics",
                 child: [
+                    {
+                        name: "Skin Care",
+                        child: [
+                            {
+                                name: "Face Wash",
+                                child: []
+                            },
+                            {
+                                name: "Face Cream",
+                                child: []
+                            },
+                            {
+                                name: "Face Moisturizers",
+                                child: []
+                            },
+                            {
+                                name: "Face Cleansers & Scrubs",
+                                child: []
+                            },
+                            {
+                                name: "Face Packs & Facial Kits",
+                                child: []
+                            },
+                            {
+                                name: "Face Mist",
+                                child: []
+                            },
+                            {
+                                name: "Face Serums & Gels",
+                                child: []
+                            },
+                            {
+                                name: "Roller",
+                                child: []
+                            },
+                            {
+                                name: "Sunscreens",
+                                child: []
+                            },
+                            {
+                                name: "Night Creams",
+                                child: []
+                            },
+                            {
+                                name: "Toners",
+                                child: []
+                            },
+                            {
+                                name: "Face Masks and Peels",
+                                child: []
+                            },
+                            {
+                                name: "Face Wipes",
+                                child: []
+                            },
+                            {
+                                name: "Hand Wash",
+                                child: []
+                            }
+                        ]
+                    },
+                    {
+                        name: "Bath & Body",
+                        child: [
+                            {
+                                name: "Body Wash & Shower Gels",
+                                child: []
+                            },
+                            {
+                                name: "Soaps",
+                                child: []
+                            },
+                            {
+                                name: "Shampoo & Conditioner",
+                                child: []
+                            },
+                            {
+                                name: "Shower Caps",
+                                child: []
+                            },
+                            {
+                                name: "Body Scrubers & Brushes",
+                                child: []
+                            },
+                            {
+                                name: "Loofahs & Sponges",
+                                child: []
+                            },
+                            {
+                                name: "Scrubs & Exfoliants",
+                                child: []
+                            },
+                            {
+                                name: "Bath Salts",
+                                child: []
+                            },
+                            {
+                                name: "Body Lotions & Creams",
+                                child: []
+                            },
+                            {
+                                name: "Body Butter",
+                                child: []
+                            },
+                            {
+                                name: "Massage Oils",
+                                child: []
+                            },
+                            {
+                                name: "Hand Cream & Foot Cream",
+                                child: []
+                            },
+                            {
+                                name: "Anti-Stretch Mark Creams",
+                                child: []
+                            },
+                            {
+                                name: "Maternal Care",
+                                child: []
+                            },
+                            {
+                                name: "Wound Care",
+                                child: []
+                            }
+                        ],
+                        attributes: [
+                            "Brand",
+                            "Color",
+                            "Applied For",
+                            "Form",
+                            "Hair Type",
+                            "Quantity",
+                            "Volume",
+                            "Skin Type",
+                            "Ingredients"
+                        ],
+                        passAttributeToChild: true
+                    },
                     {
                         name: "Face",
                         child: [
@@ -2347,6 +2476,14 @@ export const GetCategories = function () {
                             },
                             {
                                 name: "Lip Balm",
+                                child: []
+                            },
+                            {
+                                name: "Lip Scrubs",
+                                child: []
+                            },
+                            {
+                                name: "Lip Masks",
                                 child: []
                             }
                         ]
@@ -2455,6 +2592,14 @@ export const GetCategories = function () {
                             {
                                 name: "Eye Concealer",
                                 child: []
+                            },
+                            {
+                                name: "Eye Masks",
+                                child: []
+                            },
+                            {
+                                name: "Eye Creams & Serums",
+                                child: []
                             }
                         ]
                     },
@@ -2550,178 +2695,6 @@ export const GetCategories = function () {
             {
                 name: "Health & Personal Care",
                 child: [
-                    {
-                        name: "Skin Care",
-                        child: [
-                            {
-                                name: "Face Wash",
-                                child: []
-                            },
-                            {
-                                name: "Face Cream",
-                                child: []
-                            },
-                            {
-                                name: "Face Moisturizers",
-                                child: []
-                            },
-                            {
-                                name: "Face Cleansers & Scrubs",
-                                child: []
-                            },
-                            {
-                                name: "Face Packs & Facial Kits",
-                                child: []
-                            },
-                            {
-                                name: "Face Mist",
-                                child: []
-                            },
-                            {
-                                name: "Face Serums & Gels",
-                                child: []
-                            },
-                            {
-                                name: "Roller",
-                                child: []
-                            },
-                            {
-                                name: "Sunscreens",
-                                child: []
-                            },
-                            {
-                                name: "Night Creams",
-                                child: []
-                            },
-                            {
-                                name: "Toners",
-                                child: []
-                            },
-                            {
-                                name: "Face Masks and Peels",
-                                child: []
-                            },
-                            {
-                                name: "Face Wipes",
-                                child: []
-                            },
-                            {
-                                name: "Hand Wash",
-                                child: []
-                            }
-                        ]
-                    },
-                    {
-                        name: "Eye Care",
-                        child: [
-                            {
-                                name: "Eye Masks",
-                                child: []
-                            },
-                            {
-                                name: "Eye Creams & Serums",
-                                child: []
-                            }
-                        ],
-                        attributes: [
-                            "Brand",
-                            "Form",
-                            "Applied For",
-                            "Ingredients",
-                            "Quantity"
-                        ],
-                        passAttributeToChild: true
-                    },
-                    {
-                        name: "Lip Care",
-                        child: [
-                            {
-                                name: "Lip Scrubs",
-                                child: []
-                            },
-                            {
-                                name: "Lip Masks",
-                                child: []
-                            }
-                        ]
-                    },
-                    {
-                        name: "Bath & Body",
-                        child: [
-                            {
-                                name: "Body Wash & Shower Gels",
-                                child: []
-                            },
-                            {
-                                name: "Soaps",
-                                child: []
-                            },
-                            {
-                                name: "Shampoo & Conditioner",
-                                child: []
-                            },
-                            {
-                                name: "Shower Caps",
-                                child: []
-                            },
-                            {
-                                name: "Body Scrubers & Brushes",
-                                child: []
-                            },
-                            {
-                                name: "Loofahs & Sponges",
-                                child: []
-                            },
-                            {
-                                name: "Scrubs & Exfoliants",
-                                child: []
-                            },
-                            {
-                                name: "Bath Salts",
-                                child: []
-                            },
-                            {
-                                name: "Body Lotions & Creams",
-                                child: []
-                            },
-                            {
-                                name: "Body Butter",
-                                child: []
-                            },
-                            {
-                                name: "Massage Oils",
-                                child: []
-                            },
-                            {
-                                name: "Hand Cream & Foot Cream",
-                                child: []
-                            },
-                            {
-                                name: "Anti-Stretch Mark Creams",
-                                child: []
-                            },
-                            {
-                                name: "Maternal Care",
-                                child: []
-                            },
-                            {
-                                name: "Wound Care",
-                                child: []
-                            }
-                        ],
-                        attributes: [
-                            "Brand",
-                            "Color",
-                            "Applied For",
-                            "Form",
-                            "Hair Type",
-                            "Quantity",
-                            "Volume",
-                            "Skin Type",
-                            "Ingredients"
-                        ],
-                        passAttributeToChild: true
-                    },
                     {
                         name: "Men's Grooming",
                         child: [
@@ -2906,7 +2879,7 @@ export const GetCategories = function () {
                 ]
             },
             {
-                name: "Party Supplies & Gifts",
+                name: "Cakes & Party Supplies",
                 child: [
                     {
                         name: "Party Supplies",
